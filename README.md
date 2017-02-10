@@ -5,5 +5,5 @@ Just add global extension "ScriptPlayer", and run the program with a parameter: 
 
 
 ##Requirements
-[EasyXML][http://www.ingasoftplus.com/ProductDetail.php?ProductID=293]
+[EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
 
