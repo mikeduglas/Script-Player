@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script>
+
+  <!-- Procedure "Main" -->
+  <procedure name="Main">
+
+    <!-- Initialize window and controls -->
+    <event name="OpenWindow" position="1">
+      
+      <!-- Change APPLICATION title -->
+      <action name="SetProp">
+        <property name="text" value="'School with ScriptPlayer [Current path: ' &amp; PATH() &amp; ']'" evaluate="1"></property>
+      </action>
+      
+      <!-- Translate menu items from English to ENGLISH (all texts in UPPER CASE)-->
+      
+      <!-- File menu -->
+      <action name="SetProp" field="?MENU1">
+        <property name="text" value="&amp;FILE"></property>
+      </action>
+      <action name="SetProp" field="?PrintSetup">
+        <property name="text" value="&amp;PRINT SETUP ..."></property>
+      </action>
+      <action name="SetProp" field="?Exit">
+        <property name="text" value="E&amp;XIT"></property>
+      </action>
+      
+      <!-- Edit menu -->
+      <action name="SetProp" field="?MENU2">
+        <property name="text" value="&amp;EDIT"></property>
+      </action>
+      <action name="SetProp" field="?Cut">
+        <property name="text" value="CU&amp;T"></property>
+      </action>
+      <action name="SetProp" field="?Copy">
+        <property name="text" value="&amp;COPY"></property>
+      </action>
+      <action name="SetProp" field="?Paste">
+        <property name="text" value="&amp;PASTE"></property>
+      </action>
+      
+      <!-- Trees menu -->
+      <action name="SetProp" field="?Trees">
+        <property name="text" value="&amp;TREES"></property>
+      </action>
+      <action name="SetProp" field="?BrowseClassTree">
+        <property name="text" value="&amp;CLASS TREE"></property>
+      </action>
+      <action name="SetProp" field="?BrowseStudentsTree">
+        <property name="text" value="&amp;STUDENTS TREE"></property>
+      </action>
+     
+      <!-- Browse menu -->
+      <action name="SetProp" field="?MENU3">
+        <property name="text" value="&amp;BROWSE"></property>
+      </action>
+      <action name="SetProp" field="?BrowseStudents">
+        <property name="text" value="STUDENTS"></property>
+      </action>
+      <action name="SetProp" field="?BrowseTeachers">
+        <property name="text" value="TEACHERS"></property>
+      </action>
+      <action name="SetProp" field="?BrowseClasses">
+        <property name="text" value="CLASSES"></property>
+      </action>
+      <action name="SetProp" field="?BrowseEnrollment">
+        <property name="text" value="ENROLLMENT"></property>
+      </action>
+      <action name="SetProp" field="?BrowseCourses">
+        <property name="text" value="COURSES"></property>
+      </action>
+      <action name="SetProp" field="?BrowseMajors">
+        <property name="text" value="MAJORS"></property>
+      </action>
+      <action name="SetProp" field="?BrowseUpdateGrades">
+        <property name="text" value="UPDATE GRADES"></property>
+      </action>
+     
+      <!-- Reports cmenu -->
+      <action name="SetProp" field="?ReportMenu">
+        <property name="text" value="&amp;REPORTS"></property>
+      </action>
+      <action name="SetProp" field="?PrintENR:StuSeq">
+        <property name="text" value="STUDENT CLASS SCHEDULES"></property>
+      </action>
+      <action name="SetProp" field="?ReportsTeacherClassSchedules">
+        <property name="text" value="TEACHER CLASS SCHEDULES"></property>
+      </action>
+      <action name="SetProp" field="?PrintENR:SeqStu">
+        <property name="text" value="ATTENDANCE SHEETS"></property>
+      </action>
+      <action name="SetProp" field="?PrintCOU:KeyDescription">
+        <property name="text" value="COURSE ENROLLMENT"></property>
+      </action>
+      <action name="SetProp" field="?ReportsCourseEnrollmentSummary">
+        <property name="text" value="COURSE ENROLLMENT SUMMARY"></property>
+      </action>
+      <action name="SetProp" field="?ReportsFinalGrades">
+        <property name="text" value="FINAL GRADES"></property>
+      </action>
+      <action name="SetProp" field="?ReportsStudentIDs">
+        <property name="text" value="STUDENT IDS"></property>
+      </action>
+     
+      <!-- Window menu -->
+      <action name="SetProp" field="?MENU4">
+        <property name="text" value="&amp;WINDOW"></property>
+      </action>
+      <action name="SetProp" field="?Tile">
+        <property name="text" value="T&amp;ILE"></property>
+      </action>
+      <action name="SetProp" field="?Cascade">
+        <property name="text" value="&amp;CASCADE"></property>
+      </action>
+      <action name="SetProp" field="?Arrange">
+        <property name="text" value="&amp;ARRANGE ICONS"></property>
+      </action>
+    
+      <!-- Help menu -->
+      <action name="SetProp" field="?MENU5">
+        <property name="text" value="&amp;HELP"></property>
+      </action>
+      <action name="SetProp" field="?Helpindex">
+        <property name="text" value="&amp;CONTENTS"></property>
+      </action>
+      <action name="SetProp" field="?HelpSearch">
+        <property name="text" value="&amp;SEARCH FOR HELP ON..."></property>
+      </action>
+      <action name="SetProp" field="?HelpOnHelp">
+        <property name="text" value="&amp;HOW TO USE HELP"></property>
+      </action>
+
+      
+      <!-- Open BrowseStudents() procedure -->
+      <action name="Accept" field="?BrowseStudents"/>
+    
+    </event>
+    
+    <!-- Say "Bye-bye" on closing -->
+    <event name="CloseWindow">
+      <action name="Evaluate" expression="MESSAGE('Bye-bye!', 'Script Player', 'ICON:Application')"/>
+    </event>
+  
+  </procedure>
+  
+  <!-- Procedure "BrowseStudents" -->
+  <procedure name="BrowseStudents" event="OpenWindow" action="Accept" target="?Insert:2">
+    
+    <!-- Initialize window and controls -->
+    <event name="OpenWindow" position="1">
+      
+      <!-- Change font style to Bold for ?Close button -->
+      <action name="SetProp" field="?Close">
+        <property name="fontstyle" value="700"></property>
+      </action>
+      
+      <!-- Select 2nd TAB -->
+      <action name="SetProp" field="?CurrentTab">
+        <property name="selected" value="2"></property>
+      </action>
+    </event>
+  
+  </procedure>
+</script>

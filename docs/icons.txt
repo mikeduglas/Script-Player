@@ -1,0 +1,14 @@
+  CASE LOWER(pIcon)
+  OF 'icon:none'
+    sIcon = ICON:None
+  OF 'icon:application'
+    sIcon = ICON:Application
+  OF 'icon:hand'
+    sIcon = ICON:Hand
+  OF 'icon:question'
+    sIcon = ICON:Question
+  OF 'icon:exclamation'
+    sIcon = ICON:Exclamation
+  OF 'icon:asterisk'
+    sIcon = ICON:Asterisk
+  END

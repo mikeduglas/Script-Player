@@ -1,0 +1,10 @@
+  CASE LOWER(pActionName)
+  OF 'accept'
+    RETURN ACTION:Accept
+  OF 'select'
+    RETURN ACTION:Select
+  OF 'setprop'
+    RETURN ACTION:SetProp
+  OF 'evaluate'
+    RETURN ACTION:Evaluate
+  END

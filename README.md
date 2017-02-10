@@ -14,10 +14,18 @@ If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), y
 - On exit of application the MESSAGE("Bye-bye") is thrown.
 
 ## XML script.
-See provided school.xml script, it contains the comments.
 In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate an expressions.
-Full list of available events, actions, and properties see in the docs.
+Full list of available events, actions, and properties see in the \docs subfolder.
 
-##Requirements
-[EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
 
+- See "docs\How-To.txt" to learn more about script syntax.
+- Also see provided school.xml script, it contains the comments.
+
+
+## Requirements
+- C6 and higher, ABC/Legacy
+- [EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
+
+
+### Price
+$25

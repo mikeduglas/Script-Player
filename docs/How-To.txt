@@ -1,0 +1,58 @@
+1. Script pattern:
+
+<?xml version="1.0" encoding="utf-8"?>
+<script>
+  <procedure name="Main">
+    <event name="OpenWindow" position="1">
+      <action name="SetProp">
+        <property name="text" value="'School with ScriptPlayer [Current path: ' &amp; PATH() &amp; ']'" evaluate="1"></property>
+      </action>
+    </event>
+  </procedure>
+</script>
+
+2. <procedure> element contains "name" attribute:
+
+  <procedure name="Main">
+
+3. <event> element contains "name", optional "field" and optional "position" attributes:
+
+  <event name="Accepted" field="?OK" position="1">
+
+name: see events.txt for available event names;
+
+field: Field equate label; "0" or missing means that the event is field-independent;
+
+position: "0" (default) means that the event will be processed before standard event handling;
+position: "1" means that the event will be processed after standard event handling.
+
+4. <action> element contains "name", and optional "field", "expression" and "level" attributes:
+
+   <action name="SetProp" field="?OK" expression="MESSAGE('Bye-bye!', 'Script Player', 'ICON:Application')" level="Notify">:
+
+name: see actions.txt for available action names;
+
+field: Field equate label; "0" or missing means that the action is field-independent;
+
+expression: can be applied only if action's name is "Evaluate"; EVALUATE(expression) will be called;
+
+level: "Notify" indicates that processing is completed for this event and the ACCEPT loop should CYCLE; 
+level: "Fatal" indicates the event could not be processed and the ACCEPT loop should BREAK.
+See levels.txt for available level names.
+
+5. <property> element contains "name", "value" and optional "evaluate" attributes:
+
+  <property name="text" value="STUDENT CLASS SCHEDULES" evaluate="0"></property>
+
+name: see props.txt for available properties names;
+
+value: property value;
+
+evaluate: "0" (default) means that "value" will be assigned to the property as is;
+evaluate: "1" means that "value" will be assigned to the property as EVALUATE(value).
+
+
+** EVALUATE Notes:
+
+- To use ampersand symbol "&" in xml you must escape it as "&amp;"
+- Although the function MESSAGE() is not allowed in EVALUATE(), you can use it in Script Player. For available icon parameter see icons.txt.
