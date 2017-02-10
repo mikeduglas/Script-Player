@@ -14,7 +14,7 @@ If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), y
 - On exit of application the MESSAGE("Bye-bye") is thrown.
 
 ## XML script.
-In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate an expressions.
+In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
 Full list of available events, actions, and properties see in the \docs subfolder.
 
 
