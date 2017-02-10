@@ -27,5 +27,7 @@ Full list of available events, actions, and properties see in the \docs subfolde
 - [EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
 
 
+No black boxes, only pure Clarion code (class and template).
+
 ### Price
 $25
