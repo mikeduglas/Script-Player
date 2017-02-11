@@ -3,6 +3,25 @@
 ## It allows you to manipulate the properties of windows and controls at run time.
 Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml"
 
+
+## History
+
+### v1.01
+- new ACTION:ChangeText - shortcut for SetProp(text) and allows to significally reduce amount of script lines. For example,
+  
+      <!-- Using ACTION:SetProp and PROP:Text -->
+      <action name="SetProp" field="?MENU1">
+        <property name="text" value="&amp;FILE"></property>
+      </action>
+  
+      <!-- Using ACTION:ChangeText -->
+      <action name="ChangeText" field="?MENU1" expression="&amp;FILE"/>  
+  
+
+### v1.00  
+Initial release
+
+
 ## Demo appliaction.
 Standard School app with ScriptPlayer template. If you run school.exe without command line parameter, the program behavior is not changed.
 If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), you'll see the difference:

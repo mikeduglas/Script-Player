@@ -7,4 +7,6 @@
     RETURN ACTION:SetProp
   OF 'evaluate'
     RETURN ACTION:Evaluate
+  OF 'changetext'
+    RETURN ACTION:ChangeText
   END
