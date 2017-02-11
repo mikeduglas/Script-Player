@@ -29,7 +29,7 @@ Full list of available events, actions, and properties see in the \docs subfolde
 
 No black boxes, only pure Clarion code (class and template).
 
-### Price
+## Price
 $25
 
 ## Contacts
