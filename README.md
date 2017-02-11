@@ -33,5 +33,5 @@ No black boxes, only pure Clarion code (class and template).
 $25
 
 ## Contacts
-(mikeduglas@yandex.ru)  
-(mikeduglas66@gmail.com)
+[mikeduglas@yandex.ru](mikeduglas@yandex.ru)  
+[mikeduglas66@gmail.com](mikeduglas66@gmail.com)
