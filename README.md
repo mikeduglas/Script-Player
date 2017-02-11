@@ -31,3 +31,7 @@ No black boxes, only pure Clarion code (class and template).
 
 ### Price
 $25
+
+## Contacts
+(mikeduglas@yandex.ru)
+(mikeduglas66@gmail.com)
