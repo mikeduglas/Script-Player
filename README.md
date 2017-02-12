@@ -22,7 +22,7 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 - new "type" attribute for actions used to set properties of all controls with same type at once. See available types in docs\types.txt.
 
-- new <global> section applied to all procedures an an app.
+- new <global> section applied to all procedures in an app.
 Following example sets lineheight to "16" for all lists in entire app:
 
 ```xml
@@ -40,9 +40,9 @@ Following example sets lineheight to "16" for all lists in entire app:
 
 - template now generates app-CONTROLS.txt file with type of controls:
 
-    Procedure SplashIt
-      STRING       ?String2
-      STRING       ?String3
+>    Procedure SplashIt
+>      STRING       ?String2
+>      STRING       ?String3
 
 
 ### v1.00  
