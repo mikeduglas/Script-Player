@@ -40,9 +40,9 @@ Following example sets lineheight to "16" for all lists in entire app:
 
 - template now generates app-CONTROLS.txt file with type of controls:
 
->    Procedure SplashIt
->      STRING       ?String2
->      STRING       ?String3
+>    Procedure SplashIt  
+>      STRING       ?String2  
+>      STRING       ?String3  
 
 
 ### v1.00  
