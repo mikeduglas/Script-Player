@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <script>
 
+  <!-- Applied to all procedures -->
+  <global>
+    <event name="OpenWindow" position="1">
+      
+      <!-- Set LineHeight to 16 for all listboxes -->
+      <action name="SetProp" type="list">
+        <property name="lineheight" value="16"></property>
+      </action>
+    </event>
+  </global>
+  
   <!-- Procedure "Main" -->
   <procedure name="Main">
 
@@ -8,127 +19,57 @@
     <event name="OpenWindow" position="1">
       
       <!-- Change APPLICATION title -->
-      <action name="SetProp">
-        <property name="text" value="'School with ScriptPlayer [Current path: ' &amp; PATH() &amp; ']'" evaluate="1"></property>
-      </action>
-      
+      <action name="ChangeText" expression="'School with ScriptPlayer [Current path: ' &amp; PATH() &amp; ']'"  evaluate="1"/>
+
       <!-- Translate menu items from English to ENGLISH (all texts in UPPER CASE)-->
       
       <!-- File menu -->
-      <action name="SetProp" field="?MENU1">
-        <property name="text" value="&amp;FILE"></property>
-      </action>
-      <action name="SetProp" field="?PrintSetup">
-        <property name="text" value="&amp;PRINT SETUP ..."></property>
-      </action>
-      <action name="SetProp" field="?Exit">
-        <property name="text" value="E&amp;XIT"></property>
-      </action>
+      <action name="ChangeText" field="?MENU1" expression="&amp;FILE"/>
+      <action name="ChangeText" field="?PrintSetup" expression="&amp;PRINT SETUP ..."/>
+      <action name="ChangeText" field="?Exit" expression="E&amp;XIT"/>
       
       <!-- Edit menu -->
-      <action name="SetProp" field="?MENU2">
-        <property name="text" value="&amp;EDIT"></property>
-      </action>
-      <action name="SetProp" field="?Cut">
-        <property name="text" value="CU&amp;T"></property>
-      </action>
-      <action name="SetProp" field="?Copy">
-        <property name="text" value="&amp;COPY"></property>
-      </action>
-      <action name="SetProp" field="?Paste">
-        <property name="text" value="&amp;PASTE"></property>
-      </action>
+      <action name="ChangeText" field="?MENU2" expression="&amp;EDIT"/>
+      <action name="ChangeText" field="?Cut" expression="CU&amp;T"/>
+      <action name="ChangeText" field="?Copy" expression="&amp;COPY"/>
+      <action name="ChangeText" field="?Paste" expression="&amp;PASTE"/>
       
       <!-- Trees menu -->
-      <action name="SetProp" field="?Trees">
-        <property name="text" value="&amp;TREES"></property>
-      </action>
-      <action name="SetProp" field="?BrowseClassTree">
-        <property name="text" value="&amp;CLASS TREE"></property>
-      </action>
-      <action name="SetProp" field="?BrowseStudentsTree">
-        <property name="text" value="&amp;STUDENTS TREE"></property>
-      </action>
+      <action name="ChangeText" field="?Trees" expression="&amp;TREES"/>
+      <action name="ChangeText" field="?BrowseClassTree" expression="&amp;CLASS TREE"/>
+      <action name="ChangeText" field="?BrowseStudentsTree" expression="&amp;STUDENTS TREE"/>
      
       <!-- Browse menu -->
-      <action name="SetProp" field="?MENU3">
-        <property name="text" value="&amp;BROWSE"></property>
-      </action>
-      <action name="SetProp" field="?BrowseStudents">
-        <property name="text" value="STUDENTS"></property>
-      </action>
-      <action name="SetProp" field="?BrowseTeachers">
-        <property name="text" value="TEACHERS"></property>
-      </action>
-      <action name="SetProp" field="?BrowseClasses">
-        <property name="text" value="CLASSES"></property>
-      </action>
-      <action name="SetProp" field="?BrowseEnrollment">
-        <property name="text" value="ENROLLMENT"></property>
-      </action>
-      <action name="SetProp" field="?BrowseCourses">
-        <property name="text" value="COURSES"></property>
-      </action>
-      <action name="SetProp" field="?BrowseMajors">
-        <property name="text" value="MAJORS"></property>
-      </action>
-      <action name="SetProp" field="?BrowseUpdateGrades">
-        <property name="text" value="UPDATE GRADES"></property>
-      </action>
+      <action name="ChangeText" field="?MENU3" expression="&amp;BROWSE"/>
+      <action name="ChangeText" field="?BrowseStudents" expression="STUDENTS"/>
+      <action name="ChangeText" field="?BrowseTeachers" expression="TEACHERS"/>
+      <action name="ChangeText" field="?BrowseClasses" expression="CLASSES"/>
+      <action name="ChangeText" field="?BrowseEnrollment" expression="ENROLLMENT"/>
+      <action name="ChangeText" field="?BrowseCourses" expression="COURSES"/>
+      <action name="ChangeText" field="?BrowseMajors" expression="MAJORS"/>
+      <action name="ChangeText" field="?BrowseUpdateGrades" expression="UPDATE GRADES"/>
      
       <!-- Reports cmenu -->
-      <action name="SetProp" field="?ReportMenu">
-        <property name="text" value="&amp;REPORTS"></property>
-      </action>
-      <action name="SetProp" field="?PrintENR:StuSeq">
-        <property name="text" value="STUDENT CLASS SCHEDULES"></property>
-      </action>
-      <action name="SetProp" field="?ReportsTeacherClassSchedules">
-        <property name="text" value="TEACHER CLASS SCHEDULES"></property>
-      </action>
-      <action name="SetProp" field="?PrintENR:SeqStu">
-        <property name="text" value="ATTENDANCE SHEETS"></property>
-      </action>
-      <action name="SetProp" field="?PrintCOU:KeyDescription">
-        <property name="text" value="COURSE ENROLLMENT"></property>
-      </action>
-      <action name="SetProp" field="?ReportsCourseEnrollmentSummary">
-        <property name="text" value="COURSE ENROLLMENT SUMMARY"></property>
-      </action>
-      <action name="SetProp" field="?ReportsFinalGrades">
-        <property name="text" value="FINAL GRADES"></property>
-      </action>
-      <action name="SetProp" field="?ReportsStudentIDs">
-        <property name="text" value="STUDENT IDS"></property>
-      </action>
+      <action name="ChangeText" field="?ReportMenu" expression="&amp;REPORTS"/>
+      <action name="ChangeText" field="?PrintENR:StuSeq" expression="STUDENT CLASS SCHEDULES"/>
+      <action name="ChangeText" field="?ReportsTeacherClassSchedules" expression="TEACHER CLASS SCHEDULES"/>
+      <action name="ChangeText" field="?PrintENR:SeqStu" expression="ATTENDANCE SHEETS"/>
+      <action name="ChangeText" field="?PrintCOU:KeyDescription" expression="COURSE ENROLLMENT"/>
+      <action name="ChangeText" field="?ReportsCourseEnrollmentSummary" expression="COURSE ENROLLMENT SUMMARY"/>
+      <action name="ChangeText" field="?ReportsFinalGrades" expression="FINAL GRADES"/>
+      <action name="ChangeText" field="?ReportsStudentIDs" expression="STUDENT IDS"/>
      
       <!-- Window menu -->
-      <action name="SetProp" field="?MENU4">
-        <property name="text" value="&amp;WINDOW"></property>
-      </action>
-      <action name="SetProp" field="?Tile">
-        <property name="text" value="T&amp;ILE"></property>
-      </action>
-      <action name="SetProp" field="?Cascade">
-        <property name="text" value="&amp;CASCADE"></property>
-      </action>
-      <action name="SetProp" field="?Arrange">
-        <property name="text" value="&amp;ARRANGE ICONS"></property>
-      </action>
+      <action name="ChangeText" field="?MENU4" expression="&amp;WINDOW"/>
+      <action name="ChangeText" field="?Tile" expression="T&amp;ILE"/>
+      <action name="ChangeText" field="?Cascade" expression="&amp;CASCADE"/>
+      <action name="ChangeText" field="?Arrange" expression="&amp;ARRANGE ICONS"/>
     
       <!-- Help menu -->
-      <action name="SetProp" field="?MENU5">
-        <property name="text" value="&amp;HELP"></property>
-      </action>
-      <action name="SetProp" field="?Helpindex">
-        <property name="text" value="&amp;CONTENTS"></property>
-      </action>
-      <action name="SetProp" field="?HelpSearch">
-        <property name="text" value="&amp;SEARCH FOR HELP ON..."></property>
-      </action>
-      <action name="SetProp" field="?HelpOnHelp">
-        <property name="text" value="&amp;HOW TO USE HELP"></property>
-      </action>
+      <action name="ChangeText" field="?MENU5" expression="&amp;HELP"/>
+      <action name="ChangeText" field="?Helpindex" expression="&amp;CONTENTS"/>
+      <action name="ChangeText" field="?HelpSearch" expression="&amp;SEARCH FOR HELP ON..."/>
+      <action name="ChangeText" field="?HelpOnHelp" expression="&amp;HOW TO USE HELP"/>
 
       
       <!-- Open BrowseStudents() procedure -->

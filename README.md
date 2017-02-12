@@ -20,6 +20,31 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
       <action name="ChangeText" field="?MENU1" expression="&amp;FILE"/>  
 ```
 
+- new "type" attribute for actions used to set properties of all controls with same type at once. See available types in docs\types.txt.
+
+- new <global> section applied to all procedures an an app.
+Following example sets lineheight to "16" for all lists in entire app:
+
+```xml
+  <!-- Applied to all procedures -->
+  <global>
+    <event name="OpenWindow" position="1">
+      
+      <!-- Set LineHeight to 16 for all listboxes -->
+      <action name="SetProp" type="list">
+        <property name="lineheight" value="16"></property>
+      </action>
+    </event>
+  </global>
+```  
+
+- template now generates app-CONTROLS.txt file with type of controls:
+
+    Procedure SplashIt
+      STRING       ?String2
+      STRING       ?String3
+
+
 ### v1.00  
 Initial release
 

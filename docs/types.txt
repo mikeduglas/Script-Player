@@ -1,0 +1,72 @@
+  CASE LOWER(pControlType)
+  OF ''
+    RETURN 0
+  OF 'sstring'
+    RETURN CREATE:sstring
+  OF 'string'
+    RETURN CREATE:string
+  OF 'image'
+    RETURN CREATE:image
+  OF 'region'
+    RETURN CREATE:region
+  OF 'line'
+    RETURN CREATE:line
+  OF 'box'
+    RETURN CREATE:box
+  OF'ellipse'
+    RETURN CREATE:ellipse
+  OF 'entry'
+    RETURN CREATE:entry
+  OF 'button'
+    RETURN CREATE:button
+  OF 'prompt'
+    RETURN CREATE:prompt
+  OF 'option'
+    RETURN CREATE:option
+  OF 'check'
+    RETURN CREATE:check
+  OF 'group'
+    RETURN CREATE:group
+  OF 'list'
+    RETURN CREATE:list
+  OF 'combo'
+    RETURN CREATE:combo
+  OF 'spin'
+    RETURN CREATE:spin
+  OF 'text'
+    RETURN CREATE:text
+  OF 'menu'
+    RETURN CREATE:menu
+  OF 'item'
+    RETURN CREATE:item
+  OF 'radio'
+    RETURN CREATE:radio
+  OF 'menubar'
+    RETURN CREATE:menubar
+  OF 'droplist'
+    RETURN CREATE:droplist
+  OF 'dropcombo'
+    RETURN CREATE:dropcombo
+  OF 'progress'
+    RETURN CREATE:progress
+  OF 'sheet'
+    RETURN CREATE:sheet
+  OF 'tab'
+    RETURN CREATE:tab
+  OF 'panel'
+    RETURN CREATE:panel
+  OF 'rtf'
+    RETURN CREATE:rtf
+  OF 'toolbar'
+    RETURN CREATE:toolbar
+    
+    COMPILE('__C8__', _C80_)
+
+  OF 'singleline'
+    RETURN CREATE:singleline
+  OF 'state3'
+    RETURN CREATE:state3
+    
+    !'__C8__'
+    
+  END
