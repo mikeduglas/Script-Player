@@ -2,7 +2,7 @@
 <script>
 
   <!-- Applied to all procedures -->
-  <global>
+  <global logfile="school.log">
     <event name="OpenWindow" position="1">
       
       <!-- Set LineHeight to 16 for all listboxes -->
@@ -17,6 +17,11 @@
 
     <!-- Initialize window and controls -->
     <event name="OpenWindow" position="1">
+
+      <!-- Globally disable tooltips -->
+      <action name="SetProp" field="System">
+        <property name="notips" value="1"></property>
+      </action>
       
       <!-- Change APPLICATION title -->
       <action name="ChangeText" expression="'School with ScriptPlayer [Current path: ' &amp; PATH() &amp; ']'"  evaluate="1"/>
@@ -87,6 +92,12 @@
   <!-- Procedure "BrowseStudents" -->
   <procedure name="BrowseStudents" event="OpenWindow" action="Accept" target="?Insert:2">
     
+    <!-- Inform a user about hotkeys -->
+    <event name="OpenWindow">
+      <action name="Evaluate" expression=
+      "MESSAGE('Press Ctrl-Shift-E to export to Excel|Press Ctrl-Shift-H to export to HTML|Press Ctrl-Shift-S to open a dialog|while browse box has focus.', 'Script Player', 'ICON:Asterisk')"/>
+    </event>
+    
     <!-- Initialize window and controls -->
     <event name="OpenWindow" position="1">
       
@@ -99,7 +110,25 @@
       <action name="SetProp" field="?CurrentTab">
         <property name="selected" value="2"></property>
       </action>
+    
+      <!-- Assign hot keys to ?Browse:1 -->
+      <action name="SetProp" field="?Browse:1">
+        <property name="Alrt" value="CtrlShiftE"></property>
+        <property name="Alrt" value="CtrlShiftH"></property>
+        <property name="Alrt" value="CtrlShiftS"></property>
+      </action>
+
     </event>
   
+    <!-- Export ?Browse:1 contents -->
+    <event name="alertkey" field="?Browse:1" key="CtrlShiftE">
+      <action name="Export" field="?Browse:1" expression="Excel"></action>
+    </event>
+    <event name="alertkey" field="?Browse:1" key="CtrlShiftH">
+      <action name="Export" field="?Browse:1" expression="Html"></action>
+    </event>
+    <event name="alertkey" field="?Browse:1" key="CtrlShiftS">
+      <action name="Export" field="?Browse:1"></action>
+    </event>
   </procedure>
 </script>

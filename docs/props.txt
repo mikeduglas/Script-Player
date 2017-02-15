@@ -133,6 +133,8 @@
     RETURN PROP:Progress
   OF 'wizard'
     RETURN PROP:Wizard
+  OF 'notips'
+    RETURN PROP:NoTips
   OF 'spread'
     RETURN PROP:Spread
   OF 'screentext'

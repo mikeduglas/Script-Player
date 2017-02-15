@@ -6,12 +6,53 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 ## History
 
-### v1.01
-- new ACTION:ChangeText - shortcut for SetProp(text) and allows to significally reduce amount of script lines. For example,
+### v1.02
+- you can now set properties for "System" variable:
 ```xml
-      <!-- Using ACTION:SetProp and PROP:Text -->
-      <action name="SetProp" field="?MENU1">
-        <property name="text" value="&amp;FILE"></property>
+  <action name="SetProp" field="System">
+    <property name="notips" value="1"></property>
+  </action>
+```  
+
+- events "AlertKey" and "PreAlertKey" can be limited by key pressed.
+- new action "Export" allows to export LIST contents to Excel2007/Html/Xml/Csv formats:
+```xml
+  <!-- Initialize window and controls -->
+  <event name="OpenWindow">
+    <!-- Assign hots key to ?Browse:1 -->
+    <action name="SetProp" field="?Browse:1">
+      <property name="Alrt" value="CtrlShiftE"></property>
+      <property name="Alrt" value="CtrlShiftH"></property>
+      <property name="Alrt" value="CtrlShiftS"></property>
+    </action>
+  </event>
+
+  <!-- Export ?Browse:1 contents -->
+  <event name="alertkey" field="?Browse:1" key="CtrlShiftE">
+    <action name="Export" field="?Browse:1" expression="Excel"></action>
+  </event>
+  <event name="alertkey" field="?Browse:1" key="CtrlShiftH">
+    <action name="Export" field="?Browse:1" expression="Html"></action>
+  </event>
+  <event name="alertkey" field="?Browse:1" key="CtrlShiftS">
+    <action name="Export" field="?Browse:1"></action>
+  </event>
+``` 
+
+- you can now specify "logfile" (on global or procedure level), to automatically log the program behaviour (procedure name, thread, event, field, keycode):
+```xml
+  <global logfile="school.log"/>
+```  
+Events placed in log file are: EVENT:Accepted, EVENT:AlertKey, EVENT:CloseDown, EVENT:CloseWindow, EVENT:NewSelection, EVENT:OpenWindow.
+
+
+### v1.01
+- new ACTION:ChangeText - shortcut for SetProp(text) and allows to significally reduce amount of script lines.  
+For example, place following block into "Main" procedure, "OpenWindow" event (in this case System{prop:NoTips}=1 will be called only once):
+```xml
+      <!-- Globally disable tooltips -->
+      <action name="SetProp" field="System">
+        <property name="notips" value="1"></property>
       </action>
 ```  
 
@@ -57,7 +98,9 @@ If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), y
 - Procedure BrowseStudents is called
 - In BrowseStudents active TAB is changed to 2nd
 - In BrowseStudents "Close" button is **bold**
+- Export from BrowseStudents to Excel|Html|Xml|CSV
 - On exit of application the MESSAGE("Bye-bye") is thrown.
+- school.log file created.
 
 ## XML script
 In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
@@ -76,7 +119,7 @@ Full list of available events, actions, and properties see in the \docs subfolde
 No black boxes, only pure Clarion code (class and template).
 
 ## Price
-$25
+$35
 
 ## Contacts
 [mikeduglas@yandex.ru](mailto: mikeduglas@yandex.ru)  
