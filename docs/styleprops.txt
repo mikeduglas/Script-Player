@@ -1,0 +1,32 @@
+  !-- pPropertyName starts with "style:"
+  
+  CASE LOWER(SUB(pPropertyName, 6, LEN(pPropertyName) - 6))
+  OF 'fontname'
+    RETURN PROPSTYLE:FontName
+  OF 'fontsize'
+    RETURN PROPSTYLE:FontSize
+  OF 'fontcolor'
+    RETURN PROPSTYLE:FontColor
+  OF 'fontstyle'
+    RETURN PROPSTYLE:FontStyle
+  OF 'textcolor'  !same as fontcolor
+    RETURN PROPSTYLE:TextColor
+  OF 'backcolor'
+    RETURN PROPSTYLE:BackColor
+  OF 'textselected'
+    RETURN PROPSTYLE:TextSelected
+  OF 'backselected'
+    RETURN PROPSTYLE:BackSelected
+  OF 'picture'
+    RETURN PROPSTYLE:Picture
+  OF 'charset'
+    RETURN PROPSTYLE:CharSet
+
+    COMPILE('__C8__', _C80_)
+    
+  OF 'barframe'
+    RETURN PROPSTYLE:BarFrame
+
+    !'__C8__'
+
+  END

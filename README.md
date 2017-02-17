@@ -1,10 +1,48 @@
 # Script Player
 
 ## It allows you to manipulate the properties of windows and controls at run time.
-Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml"
+Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml"  
+** You don't need to write any line of code! **
 
 
 ## History
+
+### v1.03
+- Localization has has never been easier! New attribute "language" (<global> | <procedure>) defines "language" section where all texts are located:  
+```xml
+<?xml version="1.0" encoding="windows-1251"?>
+<script>
+  <global language="Russian"/>
+  <!-- <procedure language="Russian"/> -->
+
+  <language name="Russian">
+    <!-- File menu -->
+    <procedure name="Main">
+      <field name="?MENU1">Файл</field>
+      <field name="?PrintSetup">Установка принтера ...</field>
+      <field name="?Exit">Выход</field>
+    </procedure>
+  </language>
+</script>
+```  
+  
+- Pseudo-event "BeforeAcceptLoop" allows to set SYSTEM properties before ACCEPT loop (this is necessary for example to localize main frame menu: SYSTEM{PROP:CharSet}=CHARSET:CYRILLIC):
+```xml
+  <procedure name="Main">
+    <event name="BeforeAcceptLoop">
+      <action name="SetProp" field="System">
+        <property name="CharSet" value="204"></property>
+      </action>
+    </event>
+  </procedure>
+```  
+  
+- PROPLIST:xxx allowed: <property name="list:Underline" value="1"/>
+- PROPSTYLE:xxx allowed: <property name="style:fontname" value="Arial"/>
+- For properties which expects COLOR value, now you can use "color" attribute:  
+```xml
+    <property name="list:DefHdrTextColor" color="White"/>
+```
 
 ### v1.02
 - you can now set properties for "System" variable:
