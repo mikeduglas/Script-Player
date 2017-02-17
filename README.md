@@ -49,7 +49,11 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 ```xml
     <property name="list:DefHdrTextColor" color="White"/>
 ```
-
+- Properties which are arrays now can use "index" attribute:  
+```xml
+    <property name="list:ColStyle" index="1" value="1"/>
+```
+  
 ### v1.02
 - you can now set properties for "System" variable:
 ```xml
