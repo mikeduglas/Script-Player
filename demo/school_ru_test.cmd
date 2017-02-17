@@ -1,0 +1,1 @@
+school.exe ScriptPlayer=school_ru.xml

@@ -2,7 +2,7 @@
 <script>
 
   <!-- Applied to all procedures -->
-  <global logfile="school.log">
+  <global logfile="school.log" language="English UpperCase">
     <event name="OpenWindow" position="1">
       
       <!-- Set LineHeight to 16 for all listboxes -->
@@ -29,52 +29,52 @@
       <!-- Translate menu items from English to ENGLISH (all texts in UPPER CASE)-->
       
       <!-- File menu -->
-      <action name="ChangeText" field="?MENU1" expression="&amp;FILE"/>
+<!--      <action name="ChangeText" field="?MENU1" expression="&amp;FILE"/>
       <action name="ChangeText" field="?PrintSetup" expression="&amp;PRINT SETUP ..."/>
-      <action name="ChangeText" field="?Exit" expression="E&amp;XIT"/>
+      <action name="ChangeText" field="?Exit" expression="E&amp;XIT"/>-->
       
       <!-- Edit menu -->
-      <action name="ChangeText" field="?MENU2" expression="&amp;EDIT"/>
+<!--      <action name="ChangeText" field="?MENU2" expression="&amp;EDIT"/>
       <action name="ChangeText" field="?Cut" expression="CU&amp;T"/>
       <action name="ChangeText" field="?Copy" expression="&amp;COPY"/>
-      <action name="ChangeText" field="?Paste" expression="&amp;PASTE"/>
+      <action name="ChangeText" field="?Paste" expression="&amp;PASTE"/>-->
       
       <!-- Trees menu -->
-      <action name="ChangeText" field="?Trees" expression="&amp;TREES"/>
+<!--      <action name="ChangeText" field="?Trees" expression="&amp;TREES"/>
       <action name="ChangeText" field="?BrowseClassTree" expression="&amp;CLASS TREE"/>
-      <action name="ChangeText" field="?BrowseStudentsTree" expression="&amp;STUDENTS TREE"/>
+      <action name="ChangeText" field="?BrowseStudentsTree" expression="&amp;STUDENTS TREE"/>-->
      
       <!-- Browse menu -->
-      <action name="ChangeText" field="?MENU3" expression="&amp;BROWSE"/>
+<!--      <action name="ChangeText" field="?MENU3" expression="&amp;BROWSE"/>
       <action name="ChangeText" field="?BrowseStudents" expression="STUDENTS"/>
       <action name="ChangeText" field="?BrowseTeachers" expression="TEACHERS"/>
       <action name="ChangeText" field="?BrowseClasses" expression="CLASSES"/>
       <action name="ChangeText" field="?BrowseEnrollment" expression="ENROLLMENT"/>
       <action name="ChangeText" field="?BrowseCourses" expression="COURSES"/>
       <action name="ChangeText" field="?BrowseMajors" expression="MAJORS"/>
-      <action name="ChangeText" field="?BrowseUpdateGrades" expression="UPDATE GRADES"/>
+      <action name="ChangeText" field="?BrowseUpdateGrades" expression="UPDATE GRADES"/>-->
      
       <!-- Reports cmenu -->
-      <action name="ChangeText" field="?ReportMenu" expression="&amp;REPORTS"/>
+<!--      <action name="ChangeText" field="?ReportMenu" expression="&amp;REPORTS"/>
       <action name="ChangeText" field="?PrintENR:StuSeq" expression="STUDENT CLASS SCHEDULES"/>
       <action name="ChangeText" field="?ReportsTeacherClassSchedules" expression="TEACHER CLASS SCHEDULES"/>
       <action name="ChangeText" field="?PrintENR:SeqStu" expression="ATTENDANCE SHEETS"/>
       <action name="ChangeText" field="?PrintCOU:KeyDescription" expression="COURSE ENROLLMENT"/>
       <action name="ChangeText" field="?ReportsCourseEnrollmentSummary" expression="COURSE ENROLLMENT SUMMARY"/>
       <action name="ChangeText" field="?ReportsFinalGrades" expression="FINAL GRADES"/>
-      <action name="ChangeText" field="?ReportsStudentIDs" expression="STUDENT IDS"/>
+      <action name="ChangeText" field="?ReportsStudentIDs" expression="STUDENT IDS"/>-->
      
       <!-- Window menu -->
-      <action name="ChangeText" field="?MENU4" expression="&amp;WINDOW"/>
+<!--      <action name="ChangeText" field="?MENU4" expression="&amp;WINDOW"/>
       <action name="ChangeText" field="?Tile" expression="T&amp;ILE"/>
       <action name="ChangeText" field="?Cascade" expression="&amp;CASCADE"/>
-      <action name="ChangeText" field="?Arrange" expression="&amp;ARRANGE ICONS"/>
+      <action name="ChangeText" field="?Arrange" expression="&amp;ARRANGE ICONS"/>-->
     
       <!-- Help menu -->
-      <action name="ChangeText" field="?MENU5" expression="&amp;HELP"/>
+<!--      <action name="ChangeText" field="?MENU5" expression="&amp;HELP"/>
       <action name="ChangeText" field="?Helpindex" expression="&amp;CONTENTS"/>
       <action name="ChangeText" field="?HelpSearch" expression="&amp;SEARCH FOR HELP ON..."/>
-      <action name="ChangeText" field="?HelpOnHelp" expression="&amp;HOW TO USE HELP"/>
+      <action name="ChangeText" field="?HelpOnHelp" expression="&amp;HOW TO USE HELP"/>-->
 
       
       <!-- Open BrowseStudents() procedure -->
@@ -92,12 +92,6 @@
   <!-- Procedure "BrowseStudents" -->
   <procedure name="BrowseStudents" event="OpenWindow" action="Accept" target="?Insert:2">
     
-    <!-- Inform a user about hotkeys -->
-    <event name="OpenWindow">
-      <action name="Evaluate" expression=
-      "MESSAGE('Press Ctrl-Shift-E to export to Excel|Press Ctrl-Shift-H to export to HTML|Press Ctrl-Shift-S to open a dialog|while browse box has focus.', 'Script Player', 'ICON:Asterisk')"/>
-    </event>
-    
     <!-- Initialize window and controls -->
     <event name="OpenWindow" position="1">
       
@@ -111,11 +105,39 @@
         <property name="selected" value="2"></property>
       </action>
     
-      <!-- Assign hot keys to ?Browse:1 -->
       <action name="SetProp" field="?Browse:1">
+        <!-- Change header colors -->
+        <property name="list:DefHdrTextColor" color="White"/>
+        <property name="list:DefHdrBackColor" color="Black"/>
+        
+        <!-- Change style for all columns -->
+        <property name="style:fontname" index="1" value="Tahoma"/>
+        <property name="style:fontsize" index="1" value="12"/>
+        <property name="style:textcolor" index="1" color="Red"/>
+        <property name="style:backcolor" index="1" color="Black"/>
+        <property name="style:textselected" index="1" color="Yellow"/>
+        <property name="style:backselected" index="1" color="Gray"/>
+      
+        <property name="list:ColStyle" index="1" value="1"/>
+        <property name="list:ColStyle" index="2" value="1"/>
+        <property name="list:ColStyle" index="3" value="1"/>
+        <property name="list:ColStyle" index="4" value="1"/>
+        <property name="list:ColStyle" index="5" value="1"/>
+        <property name="list:ColStyle" index="6" value="1"/>
+        <property name="list:ColStyle" index="7" value="1"/>
+        <property name="list:ColStyle" index="8" value="1"/>
+        <property name="list:ColStyle" index="9" value="1"/>
+        <property name="list:ColStyle" index="10" value="1"/>
+        <property name="list:ColStyle" index="11" value="1"/>
+
+        <!-- Assign hot keys to ?Browse:1 -->
         <property name="Alrt" value="CtrlShiftE"></property>
         <property name="Alrt" value="CtrlShiftH"></property>
         <property name="Alrt" value="CtrlShiftS"></property>
+      </action>
+
+      <!-- Inform a user about hotkeys -->
+      <action name="Evaluate" expression="MESSAGE('Press Ctrl-Shift-E to export to Excel|Press Ctrl-Shift-H to export to HTML|Press Ctrl-Shift-S to open a dialog|while browse box has focus.', 'Script Player', 'ICON:Asterisk')">
       </action>
 
     </event>
@@ -131,4 +153,51 @@
       <action name="Export" field="?Browse:1"></action>
     </event>
   </procedure>
+
+  <!-- Localization -->
+  <language name="English UpperCase">
+    <!-- File menu -->
+    <procedure name="Main">
+      <field name="?MENU1">&amp;FILE</field>
+      <field name="?PrintSetup">&amp;PRINT SETUP ...</field>
+      <field name="?Exit">E&amp;XIT</field>
+      <!-- Edit menu -->
+      <field name="?MENU2">&amp;EDIT</field>
+      <field name="?Cut">CU&amp;T</field>
+      <field name="?Copy">&amp;COPY</field>
+      <field name="?Paste">&amp;PASTE</field>
+      <!-- Trees menu -->
+      <field name="?Trees">&amp;TREES</field>
+      <field name="?BrowseClassTree">&amp;CLASS TREE</field>
+      <field name="?BrowseStudentsTree">&amp;STUDENTS TREE</field>
+      <!-- Browse menu -->
+      <field name="?MENU3">&amp;BROWSE</field>
+      <field name="?BrowseStudents">STUDENTS</field>
+      <field name="?BrowseTeachers">TEACHERS</field>
+      <field name="?BrowseClasses">CLASSES</field>
+      <field name="?BrowseEnrollment">ENROLLMENT</field>
+      <field name="?BrowseCourses">COURSES</field>
+      <field name="?BrowseMajors">MAJORS</field>
+      <field name="?BrowseUpdateGrades">UPDATE GRADES</field>
+      <!-- Reports cmenu -->
+      <field name="?ReportMenu">&amp;REPORTS</field>
+      <field name="?PrintENR:StuSeq">STUDENT CLASS SCHEDULES</field>
+      <field name="?ReportsTeacherClassSchedules">TEACHER CLASS SCHEDULES</field>
+      <field name="?PrintENR:SeqStu">ATTENDANCE SHEETS</field>
+      <field name="?PrintCOU:KeyDescription">COURSE ENROLLMENT</field>
+      <field name="?ReportsCourseEnrollmentSummary">COURSE ENROLLMENT SUMMARY</field>
+      <field name="?ReportsFinalGrades">FINAL GRADES</field>
+      <field name="?ReportsStudentIDs">STUDENT IDS</field>
+      <!-- Window menu -->
+      <field name="?MENU4">&amp;WINDOW</field>
+      <field name="?Tile">T&amp;ILE</field>
+      <field name="?Cascade">&amp;CASCADE</field>
+      <field name="?Arrange">&amp;ARRANGE ICONS</field>
+      <!-- Help menu -->
+      <field name="?MENU5">&amp;HELP</field>
+      <field name="?Helpindex">&amp;CONTENTS</field>
+      <field name="?HelpSearch">&amp;SEARCH FOR HELP ON...</field>
+      <field name="?HelpOnHelp">&amp;HOW TO USE HELP</field>
+    </procedure>
+  </language>
 </script>

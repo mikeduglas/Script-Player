@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<script>
+
+  <!-- Applied to all procedures -->
+  <global logfile="school.log" language="Russian">
+    <event name="OpenWindow">
+      <!-- Set LineHeight to 16 for all listboxes -->
+      <action name="SetProp" type="list">
+        <property name="lineheight" value="16"></property>
+      </action>
+          
+      <!-- CharSet:Cyrillic for all windows -->
+      <action name="SetProp">
+        <property name="FontCharSet" value="204"></property>
+      </action>
+    </event>
+  </global>
+  
+  <!-- Procedure "Main" -->
+  <procedure name="Main">
+
+    <!-- Set AppFrame menu CharSet:Cyrillic BEFORE OPEN(AppFrame) -->
+    <event name="BeforeAcceptLoop">
+      <action name="SetProp" field="System">
+        <property name="CharSet" value="204"></property>
+      </action>
+    </event>
+    
+    <!-- Initialize window and controls -->
+    <event name="OpenWindow">
+      <!-- System properties -->
+      <action name="SetProp" field="System">
+        <!-- Tooltips disabled -->
+        <property name="notips" value="1"></property>
+      </action>
+      
+      <!-- Main menu CharSet:Cyrillic -->
+      <action name="SetProp" field="?MENUBAR">
+        <property name="FontCharSet" value="204"></property>
+      </action>
+
+        <!-- Change APPLICATION title -->
+      <action name="ChangeText" expression="'Школа по-русски [Текущий каталог: ' &amp; PATH() &amp; ']'"  evaluate="1"/>
+    </event>
+    
+    <event name="OpenWindow" position="1">
+      <!-- Open BrowseStudents() procedure -->
+      <action name="Accept" field="?BrowseStudents"/>
+    </event>
+    
+    <!-- Say "Bye-bye" on closing -->
+    <event name="CloseWindow">
+      <action name="Evaluate" expression="MESSAGE('Будут деньги - заходи, ну а нет - позванивай!', 'Script Player', 'ICON:Application')"/>
+    </event>
+  
+  </procedure>
+  
+  <!-- Procedure "BrowseStudents" -->
+  <procedure name="BrowseStudents" event="OpenWindow" action="Accept" target="?Insert:2">
+    
+    <!-- Inform a user about hotkeys -->
+    <event name="OpenWindow">
+      <action name="Evaluate" expression=
+      "MESSAGE('Press Ctrl-Shift-E to export to Excel|Press Ctrl-Shift-H to export to HTML|Press Ctrl-Shift-S to open a dialog|while browse box has focus.', 'Script Player', 'ICON:Asterisk')"/>
+    </event>
+    
+    <!-- Initialize window and controls -->
+    <event name="OpenWindow" position="1">
+      
+      <!-- Change font style to Bold for ?Close button -->
+      <action name="SetProp" field="?Close">
+        <property name="fontstyle" value="700"></property>
+      </action>
+      
+      <!-- Select 2nd TAB -->
+      <action name="SetProp" field="?CurrentTab">
+        <property name="selected" value="2"></property>
+      </action>
+    
+      <!-- Assign hot keys to ?Browse:1 -->
+      <action name="SetProp" field="?Browse:1">
+        <property name="Alrt" value="CtrlShiftE"></property>
+        <property name="Alrt" value="CtrlShiftH"></property>
+        <property name="Alrt" value="CtrlShiftS"></property>
+      </action>
+
+    </event>
+  
+    <!-- Export ?Browse:1 contents -->
+    <event name="alertkey" field="?Browse:1" key="CtrlShiftE">
+      <action name="Export" field="?Browse:1" expression="Excel"></action>
+    </event>
+    <event name="alertkey" field="?Browse:1" key="CtrlShiftH">
+      <action name="Export" field="?Browse:1" expression="Html"></action>
+    </event>
+    <event name="alertkey" field="?Browse:1" key="CtrlShiftS">
+      <action name="Export" field="?Browse:1"></action>
+    </event>
+  </procedure>
+
+  <!-- Localization -->
+  <language name="Russian">
+    <!-- Main -->
+    <procedure name="Main">
+      <!-- File menu -->
+      <field name="?MENU1">Файл</field>
+      <field name="?PrintSetup">Установка принтера ...</field>
+      <field name="?Exit">Выход</field>
+      <!-- Edit menu -->
+      <field name="?MENU2">Правка</field>
+      <field name="?Cut">Вырезать</field>
+      <field name="?Copy">Копировать</field>
+      <field name="?Paste">Вставить</field>
+      <!-- Trees menu -->
+      <field name="?Trees">Роща</field>
+      <field name="?BrowseClassTree">Берёза</field>
+      <field name="?BrowseStudentsTree">Рябина</field>
+      <!-- Browse menu -->
+      <field name="?MENU3">Списки</field>
+      <field name="?BrowseStudents">Студенты</field>
+      <field name="?BrowseTeachers">Преподы</field>
+      <field name="?BrowseClasses">Классы</field>
+      <field name="?BrowseEnrollment">Регистрация</field>
+      <field name="?BrowseCourses">Курсы</field>
+      <field name="?BrowseMajors">Специализация</field>
+      <field name="?BrowseUpdateGrades">Статистика</field>
+      <!-- Reports cmenu -->
+      <field name="?ReportMenu">Отчёты</field>
+      <field name="?PrintENR:StuSeq">Расписания студентов</field>
+      <field name="?ReportsTeacherClassSchedules">Расписания преподавателей</field>
+      <field name="?PrintENR:SeqStu">Посещаемость</field>
+      <field name="?PrintCOU:KeyDescription">Регистрация</field>
+      <field name="?ReportsCourseEnrollmentSummary">Регистрация (суммарн.)</field>
+      <field name="?ReportsFinalGrades">Итоговаые оценки</field>
+      <field name="?ReportsStudentIDs">Студенты</field>
+      <!-- Window menu -->
+      <field name="?MENU4">Окно</field>
+      <field name="?Tile">Плитка</field>
+      <field name="?Cascade">Каскад</field>
+      <field name="?Arrange">Выровнять иконы</field>
+      <!-- Help menu -->
+      <field name="?MENU5">Справка</field>
+      <field name="?Helpindex">Содержание</field>
+      <field name="?HelpSearch">Поиск...</field>
+      <field name="?HelpOnHelp">Как пользоваться спарвкой</field>
+    </procedure>
+  
+    <procedure name="BrowseStudents">
+      <!-- Window title -->
+      <field>Студенты</field>
+      <!-- Buttons -->      
+      <field name="?Insert:2">Добавить</field>
+      <field name="?Change:2">Изменить</field>
+      <field name="?Delete:2">Удалить</field>
+      <field name="?Close">Закрыть</field>
+      <field name="?Help">Справка</field>
+    </procedure>
+  </language>
+</script>

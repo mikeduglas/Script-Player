@@ -27,6 +27,7 @@
       SHEET        ?CurrentTab
       BUTTON       ?Close
       BUTTON       ?Help
+      TAB          <USE not set>
     ------------------------------------------------------
     Procedure BrowseClasses
       LIST         ?Browse:1
@@ -67,6 +68,9 @@
       SHEET        ?CurrentTab
       BUTTON       ?Close
       BUTTON       ?Help
+      TAB          <USE not set>
+      TAB          <USE not set>
+      TAB          <USE not set>
     ------------------------------------------------------
     Procedure StudentTree
       LIST         ?RelTree
@@ -86,6 +90,7 @@
       SHEET        ?CurrentTab
       BUTTON       ?Close
       BUTTON       ?Help
+      TAB          <USE not set>
     ------------------------------------------------------
     Procedure BrowseEnrollment
       LIST         ?Browse:1
@@ -95,6 +100,8 @@
       SHEET        ?CurrentTab
       BUTTON       ?Close
       BUTTON       ?Help
+      TAB          <USE not set>
+      TAB          <USE not set>
     ------------------------------------------------------
     Procedure Main
       MENUBAR      ?MENUBAR
@@ -287,6 +294,8 @@
       SHEET        ?CurrentTab
       BUTTON       ?Close
       BUTTON       ?Help
+      TAB          <USE not set>
+      TAB          <USE not set>
     ------------------------------------------------------
     Procedure CourseEnrollment
       PROGRESS     ?Progress:Thermometer
@@ -344,6 +353,9 @@
     Procedure SplashIt
       STRING       ?String2
       STRING       ?String3
+      PANEL        <USE not set>
+      PANEL        <USE not set>
+      PANEL        <USE not set>
     ------------------------------------------------------
     Procedure ClassSchedules2
       PROGRESS     ?Progress:Thermometer
