@@ -8,7 +8,7 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 ## History
 
 ### v1.03
-- Localization has has never been easier! New attribute "language" (<global> | <procedure>) defines "language" section where all texts are located:  
+- Localization has has never been easier! New attribute "language" (global or procedure level) defines "language" section where all texts are located:  
 ```xml
 <?xml version="1.0" encoding="windows-1251"?>
 <script>
@@ -37,8 +37,14 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
   </procedure>
 ```  
   
-- PROPLIST:xxx allowed: <property name="list:Underline" value="1"/>
-- PROPSTYLE:xxx allowed: <property name="style:fontname" value="Arial"/>
+- PROPLIST:xxx allowed:  
+```xml
+    <property name="list:Underline" value="1"/>
+```
+- PROPSTYLE:xxx allowed:  
+```xml
+    <property name="style:fontname" value="Arial"/>
+```
 - For properties which expects COLOR value, now you can use "color" attribute:  
 ```xml
     <property name="list:DefHdrTextColor" color="White"/>
