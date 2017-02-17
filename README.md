@@ -2,7 +2,7 @@
 
 ## It allows you to manipulate the properties of windows and controls at run time.
 Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml"  
-** You don't need to write any line of code! **
+**You don't need to write any line of code!**
 
 
 ## History
@@ -45,7 +45,7 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 ```xml
     <property name="style:fontname" value="Arial"/>
 ```
-- For properties which expects COLOR value, now you can use "color" attribute:  
+- For properties which expect COLOR value, now you can use "color" attribute:  
 ```xml
     <property name="list:DefHdrTextColor" color="White"/>
 ```
