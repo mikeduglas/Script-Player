@@ -8,7 +8,7 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 ## History
 
 ### v1.04
-- Bugfixes
+- Bugfixes, improvements and new features. See release notes for details.
 
 
 ### v1.03
