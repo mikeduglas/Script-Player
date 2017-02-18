@@ -9,6 +9,11 @@
       <action name="SetProp" type="list">
         <property name="lineheight" value="16"></property>
       </action>
+
+      <!-- Set Flat for all buttons -->
+      <action name="SetProp" type="button">
+        <property name="flat" value="1"></property>
+      </action>
     </event>
   </global>
   
@@ -90,7 +95,7 @@
   </procedure>
   
   <!-- Procedure "BrowseStudents" -->
-  <procedure name="BrowseStudents" event="OpenWindow" action="Accept" target="?Insert:2">
+  <procedure name="BrowseStudents">
     
     <!-- Initialize window and controls -->
     <event name="OpenWindow" position="1">

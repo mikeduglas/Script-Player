@@ -7,6 +7,10 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 ## History
 
+### v1.04
+- Bugfixes
+
+
 ### v1.03
 - Localization has has never been easier! New attribute "language" (global or procedure level) defines "language" section where all texts are located:  
 ```xml

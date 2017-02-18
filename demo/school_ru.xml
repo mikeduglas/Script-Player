@@ -8,7 +8,12 @@
       <action name="SetProp" type="list">
         <property name="lineheight" value="16"></property>
       </action>
-          
+         
+      <!-- Set Flat for all buttons -->
+      <action name="SetProp" type="button">
+        <property name="flat" value="1"></property>
+      </action>
+ 
       <!-- CharSet:Cyrillic for all windows -->
       <action name="SetProp">
         <property name="FontCharSet" value="204"></property>
@@ -56,16 +61,16 @@
   </procedure>
   
   <!-- Procedure "BrowseStudents" -->
-  <procedure name="BrowseStudents" event="OpenWindow" action="Accept" target="?Insert:2">
+  <procedure name="BrowseStudents">
     
     <!-- Inform a user about hotkeys -->
-    <event name="OpenWindow">
+    <event name="OpenWindow" position="1">
       <action name="Evaluate" expression=
       "MESSAGE('Press Ctrl-Shift-E to export to Excel|Press Ctrl-Shift-H to export to HTML|Press Ctrl-Shift-S to open a dialog|while browse box has focus.', 'Script Player', 'ICON:Asterisk')"/>
     </event>
     
     <!-- Initialize window and controls -->
-    <event name="OpenWindow" position="1">
+    <event name="OpenWindow">
       
       <!-- Change font style to Bold for ?Close button -->
       <action name="SetProp" field="?Close">

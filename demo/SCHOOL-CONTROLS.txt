@@ -66,11 +66,11 @@
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
       SHEET        ?CurrentTab
+      TAB          ?TAB1
+      TAB          ?TAB2
+      TAB          ?TAB3
       BUTTON       ?Close
       BUTTON       ?Help
-      TAB          <USE not set>
-      TAB          <USE not set>
-      TAB          <USE not set>
     ------------------------------------------------------
     Procedure StudentTree
       LIST         ?RelTree
