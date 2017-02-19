@@ -9,7 +9,7 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 ### v1.04
 - Bugfixes, improvements and new features.  
-See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.04) for details.
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.04) for details.
 
 ### v1.03
 - Localization has has never been easier! New attribute "language" (global or procedure level) defines "language" section where all texts are located.
@@ -19,7 +19,7 @@ See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.04) for 
 - For properties which expect COLOR value, now you can use "color" attribute.
 - Properties which are arrays now can use "index" attribute.
   
-See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.03) for details.
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.03) for details.
 
 ### v1.02
 - you can now set properties for "System" variable.
@@ -28,7 +28,7 @@ See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.03) for 
 - you can now specify "logfile" (on global or procedure level), to automatically log the program behaviour (procedure name, thread, event, field, keycode).  
 Events placed in log file are: EVENT:Accepted, EVENT:AlertKey, EVENT:CloseDown, EVENT:CloseWindow, EVENT:NewSelection, EVENT:OpenWindow.
   
-See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.02) for details.
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.02) for details.
 
 ### v1.01
 - new ACTION:ChangeText - shortcut for SetProp(text) and allows to significally reduce amount of script lines.  
@@ -36,7 +36,7 @@ See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.02) for 
 - new <global> section applied to all procedures in an app.
 - template now generates app-CONTROLS.txt file with type of controls.
   
-See [release notes](https://github.com/mikeduglas/Script-Player/tree/v1.02) for details.
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.02) for details.
 
 ### v1.00  
 Initial release
