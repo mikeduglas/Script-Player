@@ -45,11 +45,14 @@ Initial release
 Standard School app with ScriptPlayer template. If you run school.exe without command line parameter, the program behavior is not changed.
 If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), you'll see the difference:
 - All main menu items are "translated" (just UPPERCASEd for simplicity)
+- All buttons are flat
 - Main frame title text is changed
 - Procedure BrowseStudents is called
-- In BrowseStudents active TAB is changed to 2nd
-- In BrowseStudents "Close" button is **bold**
-- Export from BrowseStudents to Excel|Html|Xml|CSV
+- In BrowseStudents:   
+active TAB is changed to 2nd  
+"Close" button is **bold**  
+listbox is colorized  
+Export to Excel|Html|Xml|CSV allowed
 - On exit of application the MESSAGE("Bye-bye") is thrown.
 - school.log file created.
 
