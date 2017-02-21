@@ -80,7 +80,7 @@ Full list of available events, actions, and properties see in the \docs subfolde
 No black boxes, only pure Clarion code (class and template).
 
 ## Price
-$35
+$40
 
 ## Contacts
 [mikeduglas@yandex.ru](mailto: mikeduglas@yandex.ru)  
