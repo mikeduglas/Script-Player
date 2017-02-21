@@ -8,6 +8,10 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 ## History
 
+### v1.05
+- new ACTION:Capture to capture active window.
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.05) for details.
+
 ### v1.04
 - Bugfixes, improvements and new features.  
 See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.04) for details.
@@ -57,6 +61,7 @@ listbox is colorized
 Export to Excel|Html|Xml|CSV allowed
 - On exit of application the MESSAGE("Bye-bye") is thrown.
 - school.log file created.
+- Pressing Ctrl-Shift-P captures active window and saves the image on disk.
 
 ## XML script
 In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
