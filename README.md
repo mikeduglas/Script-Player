@@ -9,7 +9,8 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 ## History
 
 ### v1.05
-- new ACTION:Capture to capture active window.
+- new ACTION:Capture to capture active window;
+- new "charset" attribute of properties (applied to "charset", "fontcharset" and "style:charset" properties).
 See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.05) for details.
 
 ### v1.04
