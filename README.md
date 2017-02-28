@@ -10,7 +10,10 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 ## History
 
 ### v1.06
-- new action "CALL" allows to call Clarion functions (over 20 functions: Logic Control, Event/Window/Keyboard/Drag-and-Drop Processing, Operating System Procedures).
+- new action "CALL" allows to call Clarion functions (over 20 functions: Logic Control, Event/Window/Keyboard/Drag-and-Drop Processing, Operating System Procedures);
+- discount period expired.  
+
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.06) for details.
 
 ### v1.05
 - new ACTION:Capture to capture active window;
@@ -85,7 +88,7 @@ Full list of available events, actions, and properties see in the \docs subfolde
 No black boxes, only pure Clarion code (class and template).
 
 ## Price
-$40
+$80
 
 ## Contacts
 [mikeduglas@yandex.ru](mailto: mikeduglas@yandex.ru)  
