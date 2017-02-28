@@ -31,6 +31,13 @@
   <!-- Procedure "Main" -->
   <procedure name="Main">
 
+    <!-- A two-column drop menu -->
+    <event name="beforeacceptloop" position="1">
+      <action name="SetProp" field="?BrowseEnrollment">
+        <property name="Max" value="1"/>
+      </action>
+    </event>
+    
     <!-- Initialize window and controls -->
     <event name="OpenWindow" position="1">
 
@@ -50,6 +57,7 @@
     <!-- Say "Bye-bye" on closing -->
     <event name="CloseWindow">
       <action name="Evaluate" expression="MESSAGE('Bye-bye!', 'Script Player', 'ICON:Application')"/>
+      <!--<action name="Evaluate" expression="MESSAGE('Bye-bye!', 'Script Player', 'CLOSED.ICO')"/>-->
     </event>
   
   </procedure>
@@ -105,8 +113,12 @@
       <action name="Evaluate" expression="MESSAGE('Press Ctrl-Shift-E to export to Excel|Press Ctrl-Shift-H to export to HTML|Press Ctrl-Shift-S to open a dialog|while browse box has focus.', 'Script Player', 'ICON:Asterisk')">
       </action>
 
+      <!-- TEST CALL(HIDE) -->
+      <action name="Call" function="HIDE">
+        <parameter value="?Help"></parameter>
+      </action>
     </event>
-  
+    
     <!-- Export ?Browse:1 contents -->
     <event name="alertkey" field="?Browse:1" key="CtrlShiftE">
       <action name="Export" field="?Browse:1" expression="Excel"></action>
