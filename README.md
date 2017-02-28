@@ -6,7 +6,11 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 [Short video](https://youtu.be/CrBI9xyOm_c)
 
+
 ## History
+
+### v1.06
+- new action "CALL" allows to call Clarion functions (over 20 functions: Logic Control, Event/Window/Keyboard/Drag-and-Drop Processing, Operating System Procedures).
 
 ### v1.05
 - new ACTION:Capture to capture active window;
