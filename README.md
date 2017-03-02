@@ -9,6 +9,9 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 ## History
 
+### v1.07
+- "Export" now supports Page loaded browse boxes.
+
 ### v1.06
 - new action "CALL" allows to call Clarion functions (over 20 functions: Logic Control, Event/Window/Keyboard/Drag-and-Drop Processing, Operating System Procedures);
 - discount period expired.  
