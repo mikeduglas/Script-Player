@@ -9,6 +9,11 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 ## History
 
+### v1.08
+- Support for field="?" added (it assumes current field returning by FIELD() function)
+
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.08) for details.
+
 ### v1.07
 - "Export" now supports Page loaded browse boxes.
 
