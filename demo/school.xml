@@ -25,10 +25,6 @@
       <action name="SetProp">
         <property name="Alrt" value="CtrlShiftP"></property>
       </action>
-    
-      <!-- Assign hot keys to each list in the app -->
-      <action name="SetProp" type="list">
-      </action>
     </event>
     
     <!-- Capture each window -->
