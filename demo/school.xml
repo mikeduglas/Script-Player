@@ -87,7 +87,12 @@
       
       <!-- Change font style to Bold for ?Close button -->
       <action name="SetProp" field="?Close">
-        <property name="fontstyle" value="700"></property>
+        <property name="fontstyle" value="bold">
+        <!--<property name="fontstyle" value="12988">--> <!-- bold italic underline -->
+          <!--<where field="?Close" propname="Text" op="=" value="Close"/>-->
+          <!--<where field="?Close" propname="Text" op="match" value="Close"/>-->
+          <where field="?Close" propname="Text" op="&lt;&gt;" value="Close1"/>
+        </property>
       </action>
       
       <!-- Select 2nd TAB -->
