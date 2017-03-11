@@ -6,9 +6,20 @@ Just add global extension "ScriptPlayer", and run the program with a command lin
 
 [Short video](https://youtu.be/CrBI9xyOm_c)
 
+Areas of use:
+- Easy localization
+- Adapting to different screen resolutions
+- Uniform GUI
+- Quick "on field" redesign without the need to rebuild the app
+
 
 ## History
+- Property conditions added.
 
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.09) for details.
+
+### v1.09
+- 
 ### v1.08
 - Support for field="?" added (it assumes current field returning by FIELD() function)
 
