@@ -14,12 +14,12 @@ Areas of use:
 
 
 ## History
+
+### v1.09
 - Property conditions added.
 
 See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.09) for details.
 
-### v1.09
-- 
 ### v1.08
 - Support for field="?" added (it assumes current field returning by FIELD() function)
 
