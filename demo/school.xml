@@ -25,6 +25,13 @@
       <action name="SetProp">
         <property name="Alrt" value="CtrlShiftP"></property>
       </action>
+    
+      <!-- Change 'Number' picture from @P###-##-####P to @P##-##-##-##-#P -->
+      <action name="SetProp" type="entry">
+        <property name="Text" value="@P##-##-##-##-#P">
+          <where propname="Text" op="match" value="P###-##-####P|p###-##-####p"/>
+        </property>
+      </action>
     </event>
     
     <!-- Capture each window -->
@@ -89,9 +96,7 @@
       <action name="SetProp" field="?Close">
         <property name="fontstyle" value="bold">
         <!--<property name="fontstyle" value="12988">--> <!-- bold italic underline -->
-          <!--<where field="?Close" propname="Text" op="=" value="Close"/>-->
-          <!--<where field="?Close" propname="Text" op="match" value="Close"/>-->
-          <where field="?Close" propname="Text" op="&lt;&gt;" value="Close1"/>
+          <where field="?Close" propname="Text" op="=" value="Close"/>
         </property>
       </action>
       

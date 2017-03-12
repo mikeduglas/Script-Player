@@ -16,7 +16,7 @@ Areas of use:
 ## History
 
 ### v1.09
-- Property conditions added.
+- Property conditions added. For example, you can change pictures to @d10-b for all entries whose picture is @d1.
 
 See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.09) for details.
 
