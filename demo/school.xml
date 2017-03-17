@@ -3,8 +3,17 @@
 
   <!-- Applied to all procedures -->
   <global logfile="school.log" language="English UpperCase">
-    <event name="OpenWindow">
+    <!-- Prevent program hanging (caused by App frame menu activation) -->
+    <event name="BeforeAcceptLoop" position="1">
+      <action name="Call" function="ALERT" parameter="AltKeyPressed"/>
+      <action name="Call" function="ALERT" parameter="F10Key"/>
+      <action name="Call" function="ALERT" parameter="CtrlF10"/>
+      <action name="Call" function="ALERT" parameter="ShiftF10"/>
+      <action name="Call" function="ALERT" parameter="CtrlShiftF10"/>
+      <action name="Call" function="ALERT" parameter="AltSpace"/>
+    </event>
 
+    <event name="OpenWindow">
       <!-- Property changes for all lists in the app -->
       <action name="SetProp" type="list">
         <!-- Set LineHeight to 16 -->
@@ -29,7 +38,7 @@
       <!-- Change 'Number' picture from @P###-##-####P to @P##-##-##-##-#P -->
       <action name="SetProp" type="entry">
         <property name="Text" value="@P##-##-##-##-#P">
-          <where propname="Text" op="match" value="P###-##-####P|p###-##-####p"/>
+          <where propname="Text" op="match" value="P###-##-####P|p###-##-####p"/> <!-- pictures without @ -->
         </property>
       </action>
     </event>

@@ -15,6 +15,12 @@ Areas of use:
 
 ## History
 
+### v1.10
+- NEW: inline function parameters.
+- CHG: school.xml now includes the code to prevent program hanging caused by App frame menu activation.
+
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.10) for details.
+
 ### v1.09
 - Property conditions added. For example, you can change pictures to @d10-b for all entries whose picture is @d1.
 
