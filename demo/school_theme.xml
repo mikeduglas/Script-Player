@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script>
+
+  <!-- Applied to all procedures -->
+  <global theme="Blue theme">
+  <!--<global>-->
+    
+    <event name="BeforeAcceptLoop" position="1">
+      <!--Prevents program hanging on Windows 10 Version 1607-->
+      <action name="Call" function="ALERT">
+        <parameter value="AltKeyPressed"></parameter>
+      </action>
+      <action name="Call" function="ALERT">
+        <parameter value="F10Key"></parameter>
+      </action>
+      <action name="Call" function="ALERT">
+        <parameter value="CtrlF10"></parameter>
+      </action>
+      <action name="Call" function="ALERT">
+        <parameter value="ShiftF10"></parameter>
+      </action>
+      <action name="Call" function="ALERT">
+        <parameter value="CtrlShiftF10"></parameter>
+      </action>
+      <action name="Call" function="ALERT">
+        <parameter value="AltSpace"></parameter>
+      </action>
+    </event>
+  
+    <!-- type=roll|slide|center|blend -->
+    <!-- direction=hor_positive|hor_negative|ver_positive|ver_negative -->
+    <!-- direction2=hor_positive|hor_negative|ver_positive|ver_negative -->
+    <!-- slide: Uses slide animation. -->
+    <!-- center: Makes the window appear to collapse inward or expand outward. The various direction flags have no effect. -->
+    <!-- blend: Uses a fade effect. This flag can be used only if this is a top-level window. -->
+    <!--<animation type="roll" direction="hor_negative" direction2="ver_negative" time="500"/>-->
+    <!--<animation type="blend" time="500"/>-->  <!-- not working in MDI children -->
+    <!--<animation type="slide" direction="hor_negative" direction2="ver_positive" time="500"/>-->
+
+  </global>
+
+  <procedure name="Main" theme="No theme"/>
+  <procedure name="SplashIt" theme="No theme"/>
+  
+  <theme name="Blue theme">
+    <!-- color codes from http://www.computerhope.com/htmcolor.htm -->
+    
+    <type name="window" prop="fillcolor" color="10583155"/> <!-- Slate Blue -->
+
+    <type name="list" prop="fillcolor" color="13089173"/>  <!-- Baby Blue -->
+    <type name="list" prop="fontcolor" color="9247509"/>   <!-- Denim Dark Blue -->
+    <type name="list" prop="fontsize" value="10"/>
+    <type name="list" prop="selectedfillcolor" color="8285526"/>   <!-- Marble Blue -->
+    <type name="list" prop="flat" value="1"/>
+    
+    <type name="text" prop="fontcolor" color="white"/>
+
+    <type name="button" prop="fillcolor" color="8269108"/> <!-- Blue Whale -->
+    <type name="button" prop="fontcolor" color="white"/>
+    
+    <type name="entry" prop="fillcolor" color="gray"/>
+    <type name="entry" prop="fontcolor" color="yellow"/>
+    <type name="entry" prop="fontstyle" style="bold"/>
+    
+    <type name="prompt" prop="fontcolor" color="blue"/>
+    <type name="prompt" prop="trn" value="1"/>
+
+    <type name="string" prop="fontcolor" color="blue"/>
+    <type name="string" prop="trn" value="1"/>
+    
+    <!-- custom caption -->
+    <caption usemin="0" usemax="0" useclose="1" usehelp="1" useoptions="0">
+      <ImageName>DSCN0422.JPG</ImageName>
+      <Uri>https://github.com/mikeduglas/Script-Player</Uri>
+      <text>
+        <fontname>Segoe UI</fontname>
+        <fontcolor>yellow</fontcolor>
+        <fontsize>14</fontsize>
+        <!--<fontstyle>underline</fontstyle>-->
+        <charset>204</charset>
+        <align>center</align>  <!-- 0-left (default), 1-center, 2-right -->
+      </text>
+      <buttons>
+        <!--<fontcolor>white</fontcolor>-->
+        <!--<fontsize>16</fontsize>-->
+      </buttons>
+    </caption>
+  </theme>
+</script>

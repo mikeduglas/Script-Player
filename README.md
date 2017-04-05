@@ -15,6 +15,11 @@ Areas of use:
 
 ## History
 
+### v2.00
+- NEW: window themes. A theme is a combination of window/controls visual properties, like background, color, font style etc. 
+- NEW: custom window caption.
+- NEW: window animations (at this moment enabled only when closing windows).
+
 ### v1.10
 - NEW: inline function parameters.
 - CHG: school.xml now includes the code to prevent program hanging caused by App frame menu activation.
@@ -113,7 +118,8 @@ Full list of available events, actions, and properties see in the \docs subfolde
 No black boxes, only pure Clarion code (class and template).
 
 ## Price
-$80
+v1.xx - $80
+v2.xx - $120
 
 ## Contacts
 [mikeduglas@yandex.ru](mailto: mikeduglas@yandex.ru)  
