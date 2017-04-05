@@ -12,6 +12,11 @@ Areas of use:
 - Uniform GUI
 - Quick "on field" redesign without the need to rebuild the app
 
+Additional features:
+- Export listboxes to Excel/HTML/CSV/XML
+- Capture any window contents
+- Call MESSAGE()
+- Custom window caption
 
 ## History
 
