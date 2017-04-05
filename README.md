@@ -20,6 +20,8 @@ Areas of use:
 - NEW: custom window caption.
 - NEW: window animations (at this moment enabled only when closing windows).
 
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v2.00) for details.
+
 ### v1.10
 - NEW: inline function parameters.
 - CHG: school.xml now includes the code to prevent program hanging caused by App frame menu activation.
