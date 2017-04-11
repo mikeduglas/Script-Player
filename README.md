@@ -20,7 +20,7 @@ Additional features:
 
 ## History
 
-### v2.10
+### v2.01
 - FIX: possible program crash on window closing if custom caption used.
 - NEW: "inactivetext" caption's section allows to define caption text properties when a window gets inactive.
 
