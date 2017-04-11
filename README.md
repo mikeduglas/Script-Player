@@ -20,6 +20,12 @@ Additional features:
 
 ## History
 
+### v2.10
+- FIX: possible program crash on window closing if custom caption used.
+- NEW: "inactivetext" caption's section allows to define caption text properties when a window gets inactive.
+
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v2.01) for details.
+
 ### v2.00
 - NEW: window themes. A theme is a combination of window/controls visual properties, like background, color, font style etc. 
 - NEW: custom window caption.

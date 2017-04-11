@@ -80,6 +80,9 @@
         <charset>204</charset>
         <align>center</align>  <!-- 0-left (default), 1-center, 2-right -->
       </text>
+      <inactivetext>
+        <fontcolor>silver</fontcolor>
+      </inactivetext>
       <buttons>
         <!--<fontcolor>white</fontcolor>-->
         <!--<fontsize>16</fontsize>-->
