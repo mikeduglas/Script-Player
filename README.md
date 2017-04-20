@@ -20,6 +20,15 @@ Additional features:
 
 ## History
 
+### v2.02
+- FIX: command line corruption.
+- FIX: Window{PROP:Pixels} was not restored.
+- CHG: new <procedure>'s attributes "starts-with" and "contains".
+- CHG: height of custom caption can be specified.
+- CHG: themed controls now can accept "disabled" values.
+
+See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v2.02) for details.
+
 ### v2.01
 - FIX: possible program crash on window closing if custom caption used.
 - NEW: "inactivetext" caption's section allows to define caption text properties when a window gets inactive.

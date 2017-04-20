@@ -39,10 +39,42 @@
 
   </global>
 
+  <procedure starts-with="Browse" theme="Browse theme"/>
+  <procedure starts-with="Select" theme="Browse theme"/>
+  <procedure contains="Tree" theme="Browse theme"/>
+  <procedure name="UpdateGrades" theme="Browse theme"/>
+  <procedure starts-with="Update" theme="Update theme"/>
+  
   <procedure name="Main" theme="No theme"/>
   <procedure name="SplashIt" theme="No theme"/>
+ 
+  <theme name="Update theme">
+    <type name="text" prop="fillcolor" color="blue" disabled="silver"/>
+    <type name="text" prop="fontcolor" color="yellow" disabled="gray"/>
+
+    <!-- custom caption -->
+    <caption usemin="0" usemax="0" useclose="1" usehelp="1" useoptions="0" height="1">
+      <ImageName>DSCN0422.JPG</ImageName>
+      <Uri>https://github.com/mikeduglas/Script-Player</Uri>
+      <text>
+        <fontname>Segoe UI</fontname>
+        <fontcolor>red</fontcolor>
+        <fontsize>10</fontsize>
+        <!--<fontstyle>underline</fontstyle>-->
+        <charset>204</charset>
+        <align>center</align>  <!-- 0-left (default), 1-center, 2-right -->
+      </text>
+      <inactivetext>
+        <fontcolor>silver</fontcolor>
+      </inactivetext>
+      <buttons>
+        <!--<fontcolor>white</fontcolor>-->
+        <!--<fontsize>16</fontsize>-->
+      </buttons>
+    </caption>
+  </theme>
   
-  <theme name="Blue theme">
+  <theme name="Browse theme">
     <!-- color codes from http://www.computerhope.com/htmcolor.htm -->
     
     <type name="window" prop="fillcolor" color="10583155"/> <!-- Slate Blue -->
@@ -53,10 +85,10 @@
     <type name="list" prop="selectedfillcolor" color="8285526"/>   <!-- Marble Blue -->
     <type name="list" prop="flat" value="1"/>
     
-    <type name="text" prop="fontcolor" color="white"/>
+    <type name="text" prop="fontcolor" color="white" disabled="gray"/>
 
-    <type name="button" prop="fillcolor" color="8269108"/> <!-- Blue Whale -->
-    <type name="button" prop="fontcolor" color="white"/>
+    <type name="button" prop="fillcolor" color="8269108" disabled="silver"/> <!-- Blue Whale -->
+    <type name="button" prop="fontcolor" color="white" disabled="gray"/>
     
     <type name="entry" prop="fillcolor" color="gray"/>
     <type name="entry" prop="fontcolor" color="yellow"/>
