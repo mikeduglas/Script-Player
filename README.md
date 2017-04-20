@@ -23,7 +23,7 @@ Additional features:
 ### v2.02
 - FIX: command line corruption.
 - FIX: Window{PROP:Pixels} was not restored.
-- CHG: new <procedure>'s attributes "starts-with" and "contains".
+- CHG: new procedure's attributes "starts-with" and "contains".
 - CHG: height of custom caption can be specified.
 - CHG: themed controls now can accept "disabled" values.
 
