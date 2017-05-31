@@ -21,6 +21,10 @@
     ------------------------------------------------------
     Procedure BrowseMajors
       LIST         ?Browse:1
+          Field #01    MAJ:Description 
+            Header       Description
+            Picture      @S20
+            Format       80L(2)|M~Description~L(2)@S20@
       BUTTON       ?Insert:2
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
@@ -31,6 +35,26 @@
     ------------------------------------------------------
     Procedure BrowseClasses
       LIST         ?Browse:1
+          Field #01    CLA:ClassNumber 
+            Header       Class Number
+            Picture      @P##-#####P
+            Format       49L(1)|M~Class Number~R@P##-#####P@
+          Field #02    COU:Description 
+            Header       Course
+            Picture      @S30
+            Format       120L|M~Course~@S30@/
+          Field #03    CLA:RoomNumber 
+            Header       Room
+            Picture      @n4
+            Format       49R(1)|M~Room~@n4@
+          Field #04    CLA:ScheduledTime 
+            Header       Scheduled Time
+            Picture      @s20
+            Format       80R(1)|M~Scheduled Time~R(0)@s20@
+          Field #05    TEA:LastName 
+            Header       Instructor
+            Picture      @S20
+            Format       80L|M~Instructor~L(2)@S20@/
       BUTTON       ?Insert:2
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
@@ -42,6 +66,37 @@
     ------------------------------------------------------
     Procedure UpdateGrades
       LIST         ?List
+          Field #01    COU:Description 
+            Header       Class
+            Picture      @S30
+            Format       67L(1)|_M*~Class~@S30@
+            Color        Yes
+          Field #02    CLA:ScheduledTime 
+            Header       Time
+            Picture      @s20
+            Format       44L(1)|_M*~Time~@s20@
+            Color        Yes
+          Field #03    FullName 
+            Header       Student
+            Picture      @s25
+            Format       51L(1)|_M*~Student~@s25@
+            Color        Yes
+          Field #04    ENR:MidtermExam 
+            Header       Midterm
+            Picture      @n3
+            Format       33R(8)|_M~Midterm~L(1)@n3@
+          Field #05    ENR:FinalExam 
+            Header       Final
+            Picture      @n3
+            Format       25R(8)|_M~Final~L(1)@n3@
+          Field #06    ENR:TermPaper 
+            Header       Term Paper
+            Picture      @n3
+            Format       41R(8)_~Term Paper~L(1)@n3@
+          Field #07    DummyColumn 
+            Header       
+            Picture      @s1
+            Format       4R(2)_@s1@
       BUTTON       ?Change
       BUTTON       ?Close
       ENTRY        ?EditEntry
@@ -55,6 +110,18 @@
     ------------------------------------------------------
     Procedure SelectTeachers
       LIST         ?Browse:1
+          Field #01    TEA:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~@S20@
+          Field #02    TEA:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~@S20@
+          Field #03    MAJ:Description 
+            Header       Department
+            Picture      @S20
+            Format       80L(2)|M~Department~@S20@
       SHEET        ?CurrentTab
       TAB          ?TAB1
       TAB          ?TAB2
@@ -62,6 +129,50 @@
     ------------------------------------------------------
     Procedure BrowseStudents
       LIST         ?Browse:1
+          Field #01    STU:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)M~Last Name~@S20@
+          Field #02    STU:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~@S20@/
+          Field #03    MAJ:Description 
+            Header       Major
+            Picture      @S20
+            Format       80C(2)M~Major~C(0)@S20@
+          Field #04    STU:GradYear 
+            Header       Grad Year
+            Picture      @n4
+            Format       40C(2)|M~Grad Year~C(0)@n4@/
+          Field #05    Junk 
+            Header       
+            Picture      @s20
+            Format       80C(2)|_M@s20@
+          Field #06    STU:Address 
+            Header       
+            Picture      @S20
+            Format       123L(2)|M@S20@/
+          Field #07    STU:Address2 
+            Header       
+            Picture      @s20
+            Format       80L(2)|M@s20@/
+          Field #08    STU:City 
+            Header       
+            Picture      @S20
+            Format       83L(2)_M@S20@
+          Field #09    STU:State 
+            Header       
+            Picture      @S2
+            Format       16L(2)_M@S2@
+          Field #10    STU:Zip 
+            Header       
+            Picture      @n05
+            Format       24R(2)|_M@n05@
+          Field #11    STU:Telephone 
+            Header       Telephone
+            Picture      @s12
+            Format       52L(2)~Telephone~@s12@/
       BUTTON       ?Insert:2
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
@@ -71,6 +182,7 @@
       TAB          ?TAB3
       BUTTON       ?Close
       BUTTON       ?Help
+      BUTTON       ?BUTTON1
     ------------------------------------------------------
     Procedure StudentTree
       LIST         ?RelTree
@@ -84,6 +196,14 @@
     ------------------------------------------------------
     Procedure BrowseCourses
       LIST         ?Browse:1
+          Field #01    COU:Number 
+            Header       Number
+            Picture      @n4
+            Format       32R(1)|M~Number~L(2)@n4@
+          Field #02    COU:Description 
+            Header       Description
+            Picture      @S30
+            Format       80L(2)|M~Description~@S30@
       BUTTON       ?Insert:2
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
@@ -94,6 +214,30 @@
     ------------------------------------------------------
     Procedure BrowseEnrollment
       LIST         ?Browse:1
+          Field #01    ENR:StudentNumber 
+            Header       Student Number
+            Picture      @p###-##-####p
+            Format       60L(2)|M~Student Number~@p###-##-####p@
+          Field #02    STU:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~@S20@
+          Field #03    STU:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~@S20@/
+          Field #04    ENR:MidtermExam 
+            Header       Midterm Exam
+            Picture      @n3
+            Format       60C(2)M~Midterm Exam~C(0)@n3@
+          Field #05    ENR:FinalExam 
+            Header       Final Exam
+            Picture      @n3
+            Format       79C(2)M~Final Exam~C(0)@n3@
+          Field #06    ENR:TermPaper 
+            Header       Term Paper
+            Picture      @n3
+            Format       44C(2)|M~Term Paper~C(0)@n3@
       BUTTON       ?Insert:2
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
@@ -188,11 +332,75 @@
       ENTRY        ?MAJ:Description
       TAB          ?TeachersTab
       LIST         ?Browse:2
+          Field #01    TEA:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~L(2)@S20@
+          Field #02    TEA:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~L(2)@S20@
+          Field #03    TEA:Address 
+            Header       Address
+            Picture      @S20
+            Format       80L(2)|M~Address~L(2)@S20@
+          Field #04    TEA:City 
+            Header       City
+            Picture      @S20
+            Format       80L(2)|M~City~L(2)@S20@
+          Field #05    TEA:State 
+            Header       State
+            Picture      @S2
+            Format       24L(2)|M~State~L(2)@S2@
+          Field #06    TEA:Zip 
+            Header       Zip
+            Picture      @n05
+            Format       24R(2)|M~Zip~C(0)@n05@
+          Field #07    TEA:Telephone 
+            Header       Telephone
+            Picture      @s12
+            Format       52L(2)|M~Telephone~L(2)@s12@
       BUTTON       ?Insert:3
       BUTTON       ?Change:3
       BUTTON       ?Delete:3
       TAB          ?StudentsTab
       LIST         ?Browse:4
+          Field #01    STU:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~L(2)@S20@
+          Field #02    STU:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~L(2)@S20@
+          Field #03    STU:Address 
+            Header       Address
+            Picture      @S20
+            Format       80L(2)|M~Address~L(2)@S20@
+          Field #04    STU:Address2 
+            Header       Address 2
+            Picture      @s20
+            Format       80L(2)|M~Address 2~L(2)@s20@
+          Field #05    STU:City 
+            Header       City
+            Picture      @S20
+            Format       80L(2)|M~City~L(2)@S20@
+          Field #06    STU:State 
+            Header       State
+            Picture      @S2
+            Format       24L(2)|M~State~L(2)@S2@
+          Field #07    STU:Zip 
+            Header       Zip
+            Picture      @n05
+            Format       24R(2)|M~Zip~C(0)@n05@
+          Field #08    STU:Telephone 
+            Header       Telephone
+            Picture      @s12
+            Format       52L(2)|M~Telephone~L(2)@s12@
+          Field #09    STU:GradYear 
+            Header       Grad Year
+            Picture      @n4
+            Format       40R(2)|M~Grad Year~C(0)@n4@
       BUTTON       ?Insert:5
       BUTTON       ?Change:5
       BUTTON       ?Delete:5
@@ -229,6 +437,30 @@
       BUTTON       ?Button8
       TAB          ?EnrollmentTab
       LIST         ?Browse:2
+          Field #01    ENR:ClassNumber 
+            Header       Class Number
+            Picture      @p##-#####p
+            Format       52L(2)|M~Class Number~@p##-#####p@
+          Field #02    CLA:ScheduledTime 
+            Header       Scheduled Time
+            Picture      @s20
+            Format       80L(2)|M~Scheduled Time~@s20@/
+          Field #03    COU:Description 
+            Header       Description
+            Picture      @S30
+            Format       120L(2)|M~Description~@S30@
+          Field #04    ENR:MidtermExam 
+            Header       Midterm Exam
+            Picture      @n3
+            Format       52R(2)|M~Midterm Exam~C(0)@n3@
+          Field #05    ENR:FinalExam 
+            Header       Final Exam
+            Picture      @n3
+            Format       44R(2)|M~Final Exam~C(0)@n3@
+          Field #06    ENR:TermPaper 
+            Header       Term Paper
+            Picture      @n3
+            Format       44R(2)|M~Term Paper~C(0)@n3@
       BUTTON       ?Insert:3
       BUTTON       ?Change:3
       BUTTON       ?Delete:3
@@ -266,6 +498,22 @@
       STRING       ?MAJ:Description
       TAB          ?ClassesTab
       LIST         ?Browse:2
+          Field #01    CLA:ClassNumber 
+            Header       Class Number
+            Picture      @P##-#####P
+            Format       52L(2)|M~Class Number~@P##-#####P@
+          Field #02    COU:Description 
+            Header       Description
+            Picture      @S30
+            Format       120L(2)|M~Description~@S30@
+          Field #03    CLA:RoomNumber 
+            Header       Room Number
+            Picture      @n4
+            Format       48R(2)|M~Room Number~C(0)@n4@
+          Field #04    CLA:ScheduledTime 
+            Header       Scheduled Time
+            Picture      @s20
+            Format       80L(2)|M~Scheduled Time~@s20@
       BUTTON       ?Insert:3
       BUTTON       ?Change:3
       BUTTON       ?Delete:3
@@ -275,12 +523,20 @@
     ------------------------------------------------------
     Procedure SelectCourses
       LIST         ?Browse:1
+          Field #01    COU:Description 
+            Header       Description
+            Picture      @S30
+            Format       80L(2)|M~Description~L(2)@S30@
       SHEET        ?CurrentTab
       TAB          ?TAB1
       BUTTON       ?Help
     ------------------------------------------------------
     Procedure SelectMajors
       LIST         ?Browse:1
+          Field #01    MAJ:Description 
+            Header       Description
+            Picture      @S20
+            Format       80L(2)|M~Description~L(2)@S20@
       SHEET        ?CurrentTab
       TAB          ?TAB1
       TAB          ?TAB2
@@ -288,6 +544,38 @@
     ------------------------------------------------------
     Procedure BrowseTeachers
       LIST         ?Browse:1
+          Field #01    MAJ:Description 
+            Header       Department
+            Picture      @S20
+            Format       80L(2)|M~Department~@S20@
+          Field #02    TEA:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~@S20@
+          Field #03    TEA:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~@S20@
+          Field #04    TEA:Address 
+            Header       Address
+            Picture      @S20
+            Format       80L(2)|M~Address~@S20@
+          Field #05    TEA:City 
+            Header       City
+            Picture      @S20
+            Format       80L(2)|M~City~@S20@
+          Field #06    TEA:State 
+            Header       State
+            Picture      @S2
+            Format       24L(2)|M~State~@S2@
+          Field #07    TEA:Zip 
+            Header       Zip
+            Picture      @n05
+            Format       24R(2)|M~Zip~C(0)@n05@
+          Field #08    TEA:Telephone 
+            Header       Telephone
+            Picture      @s12
+            Format       52L(2)|M~Telephone~@s12@
       BUTTON       ?Insert:2
       BUTTON       ?Change:2
       BUTTON       ?Delete:2
@@ -305,6 +593,26 @@
     ------------------------------------------------------
     Procedure SelectClasses
       LIST         ?Browse:1
+          Field #01    CLA:ClassNumber 
+            Header       Class Number
+            Picture      @P##-#####P
+            Format       52L(2)|M~Class Number~@P##-#####P@
+          Field #02    COU:Description 
+            Header       Description
+            Picture      @S30
+            Format       120L(2)|M~Description~@S30@/
+          Field #03    CLA:RoomNumber 
+            Header       Room
+            Picture      @n4
+            Format       52C(2)|M~Room~C(0)@n4@
+          Field #04    CLA:ScheduledTime 
+            Header       Scheduled Time
+            Picture      @s20
+            Format       80L(2)|M~Scheduled Time~@s20@
+          Field #05    TEA:LastName 
+            Header       Instructor
+            Picture      @S20
+            Format       80L(2)|M~Instructor~@S20@
       SHEET        ?CurrentTab
       TAB          ?TAB1
       TAB          ?TAB2
@@ -365,6 +673,26 @@
     ------------------------------------------------------
     Procedure SelectStudents
       LIST         ?Browse:1
+          Field #01    STU:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~@S20@
+          Field #02    STU:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~@S20@/
+          Field #03    STU:Number 
+            Header       Number
+            Picture      @P###-##-####P
+            Format       80C(1)|M~Number~C(0)@P###-##-####P@
+          Field #04    MAJ:Description 
+            Header       Major
+            Picture      @S20
+            Format       93C(3)|M~Major~C(0)@S20@
+          Field #05    STU:GradYear 
+            Header       Grad Year
+            Picture      @n4
+            Format       40C(2)|M~Grad Year~@n4@
       SHEET        ?CurrentTab
       TAB          ?TAB1
       TAB          ?TAB2
