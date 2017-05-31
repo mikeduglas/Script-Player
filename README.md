@@ -20,6 +20,23 @@ Additional features:
 
 ## History
 
+### v2.03
+- CHG: APPNAME-CONTROLS.txt file now contains LIST and COMBO fields and field properties:  
+```
+      LIST         ?Browse:1
+          Field #01    TEA:LastName 
+            Header       Last Name
+            Picture      @S20
+            Format       80L(2)|M~Last Name~@S20@
+          Field #02    TEA:FirstName 
+            Header       First Name
+            Picture      @S20
+            Format       80L(2)|M~First Name~@S20@
+          Field #03    MAJ:Description 
+            Header       Department
+            Picture      @S20
+            Format       80L(2)|M~Department~@S20@
+```
 ### v2.02
 - FIX: command line corruption.
 - FIX: Window{PROP:Pixels} was not restored.
