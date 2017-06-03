@@ -1,7 +1,11 @@
 # Script Player
 
 ## It allows you to manipulate the properties of windows and controls at run time.
-Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml"  
+Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml" or set script name in INI file:
+'''
+[ScriptPlayer]
+Name=school.xml
+'''
 **You don't need to write any line of code!**
 
 [Short video](https://youtu.be/CrBI9xyOm_c)
