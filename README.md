@@ -4,7 +4,7 @@
 Just add global extension "ScriptPlayer", and run the program with a command line parameter: "Myapp.exe ScriptPlayer=Myscript.xml" or set script name in INI file:
 ```
 [ScriptPlayer]
-Name=school.xml
+Name=Myscript.xml
 ```
 **You don't need to write any line of code!**
 
