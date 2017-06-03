@@ -26,6 +26,8 @@ Additional features:
 ```xml
     <procedure name="Main" fullscreenkey="F12"/>
 ```
+School.exe supports F12 key to toggle FullScreen mode.
+
 - CHG: APPNAME-CONTROLS.txt file now contains LIST and COMBO fields and field properties:  
 ```
       LIST         ?Browse:1
