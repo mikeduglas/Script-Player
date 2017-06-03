@@ -17,10 +17,15 @@ Additional features:
 - Capture any window contents
 - Call MESSAGE()
 - Custom window caption
+- Toggle FullScreen mode
 
 ## History
 
 ### v2.03
+- NEW: FullScreen mode. You can define hot key to toggle the application between FullScreen and Windowed modes:
+```xml
+    <procedure name="Main" fullscreenkey="F12"/>
+```
 - CHG: APPNAME-CONTROLS.txt file now contains LIST and COMBO fields and field properties:  
 ```
       LIST         ?Browse:1

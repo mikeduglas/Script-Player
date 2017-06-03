@@ -45,7 +45,13 @@
   <procedure name="UpdateGrades" theme="Browse theme"/>
   <procedure starts-with="Update" theme="Update theme"/>
   
-  <procedure name="Main" theme="No theme"/>
+  <procedure name="Main" theme="No theme" fullscreenkey="F12">
+    <event name="OpenWindow">
+      <!-- Inform a user about FullScreen mode -->
+      <action name="Evaluate" expression="MESSAGE('Press F12 to toggle FullScreen mode.', 'Script Player', 'ICON:Asterisk')"/>
+    </event>
+  </procedure>
+
   <procedure name="SplashIt" theme="No theme"/>
  
   <theme name="Update theme">

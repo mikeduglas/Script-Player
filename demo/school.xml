@@ -63,7 +63,7 @@
   </global>
   
   <!-- Procedure "Main" -->
-  <procedure name="Main">
+  <procedure name="Main" fullscreenkey="F12">
 
     <!-- A two-column drop menu -->
     <event name="beforeacceptloop" position="1">
@@ -85,6 +85,10 @@
       
       <!-- Open BrowseStudents() procedure -->
       <action name="Accept" field="?BrowseStudents"/>
+
+      <!-- Inform a user about FullScreen mode -->
+      <action name="Evaluate" expression="MESSAGE('Press F12 to toggle FullScreen mode.', 'Script Player', 'ICON:Asterisk')">
+      </action>
     </event>
     
     <!-- Say "Bye-bye" on closing -->
