@@ -23,6 +23,17 @@ Additional features:
 - Custom window caption
 - Toggle FullScreen mode
 
+## Requirements
+- C6 and higher, ABC/Legacy
+- [EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
+
+
+No black boxes, only pure Clarion code (class and template).
+
+## Price
+v1.xx - $80
+v2.xx - $120
+
 ## Demo appliaction
 Standard School app with ScriptPlayer template. If you run school.exe without command line parameter, the program behavior is not changed.
 If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), you'll see the difference:
@@ -47,17 +58,6 @@ Full list of available events, actions, and properties see in the \docs subfolde
 - See "docs\How-To.txt" to learn more about script syntax.
 - Also see provided school.xml script, it contains the comments.
 
-
-## Requirements
-- C6 and higher, ABC/Legacy
-- [EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
-
-
-No black boxes, only pure Clarion code (class and template).
-
-## Price
-v1.xx - $80
-v2.xx - $120
 
 ## Contacts
 <mikeduglas@yandex.ru>  
