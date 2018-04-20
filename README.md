@@ -35,7 +35,7 @@ v1.xx - $80
 v2.xx - $120
 
 ## Demo appliaction
-Standard School app with ScriptPlayer template. If you run school.exe without command line parameter, the program behavior is not changed.
+Standard School app with ScriptPlayer template. If you run school.exe without command line parameter and without [ScriptPlayer] section in INI file, the program behavior is not changed.
 If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), you'll see the difference:
 - All main menu items are "translated" (just UPPERCASEd for simplicity)
 - All buttons are flat
@@ -51,12 +51,12 @@ Export to Excel|Html|Xml|CSV allowed
 - Pressing Ctrl-Shift-P captures active window and saves the image on disk.
 
 ## XML script
-In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
+In xml scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
 Full list of available events, actions, and properties see in the \docs subfolder.
 
 
 - See "docs\How-To.txt" to learn more about script syntax.
-- Also see provided school.xml script, it contains the comments.
+- Also see provided xml scripts, they contain the comments.
 
 
 ## Contacts
