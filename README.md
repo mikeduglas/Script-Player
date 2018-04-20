@@ -23,6 +23,46 @@ Additional features:
 - Custom window caption
 - Toggle FullScreen mode
 
+## Demo appliaction
+Standard School app with ScriptPlayer template. If you run school.exe without command line parameter, the program behavior is not changed.
+If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), you'll see the difference:
+- All main menu items are "translated" (just UPPERCASEd for simplicity)
+- All buttons are flat
+- Main frame title text is changed
+- Procedure BrowseStudents is called
+- In BrowseStudents:   
+active TAB is changed to 2nd  
+"Close" button is **bold**  
+listbox is colorized  
+Export to Excel|Html|Xml|CSV allowed
+- On exit of application the MESSAGE("Bye-bye") is thrown.
+- school.log file created.
+- Pressing Ctrl-Shift-P captures active window and saves the image on disk.
+
+## XML script
+In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
+Full list of available events, actions, and properties see in the \docs subfolder.
+
+
+- See "docs\How-To.txt" to learn more about script syntax.
+- Also see provided school.xml script, it contains the comments.
+
+
+## Requirements
+- C6 and higher, ABC/Legacy
+- [EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
+
+
+No black boxes, only pure Clarion code (class and template).
+
+## Price
+v1.xx - $80
+v2.xx - $120
+
+## Contacts
+<mikeduglas@yandex.ru>  
+<mikeduglas66@gmail.com>
+
 ## History
 
 ### v2.03
@@ -135,42 +175,3 @@ See [release notes](https://github.com/mikeduglas/Script-Player/releases/tag/v1.
 Initial release
 
 
-## Demo appliaction
-Standard School app with ScriptPlayer template. If you run school.exe without command line parameter, the program behavior is not changed.
-If you run "school.exe ScriptPlayer=school.xml" (or provided school_test.cmd), you'll see the difference:
-- All main menu items are "translated" (just UPPERCASEd for simplicity)
-- All buttons are flat
-- Main frame title text is changed
-- Procedure BrowseStudents is called
-- In BrowseStudents:   
-active TAB is changed to 2nd  
-"Close" button is **bold**  
-listbox is colorized  
-Export to Excel|Html|Xml|CSV allowed
-- On exit of application the MESSAGE("Bye-bye") is thrown.
-- school.log file created.
-- Pressing Ctrl-Shift-P captures active window and saves the image on disk.
-
-## XML script
-In scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
-Full list of available events, actions, and properties see in the \docs subfolder.
-
-
-- See "docs\How-To.txt" to learn more about script syntax.
-- Also see provided school.xml script, it contains the comments.
-
-
-## Requirements
-- C6 and higher, ABC/Legacy
-- [EasyXML](http://www.ingasoftplus.com/ProductDetail.php?ProductID=293)
-
-
-No black boxes, only pure Clarion code (class and template).
-
-## Price
-v1.xx - $80
-v2.xx - $120
-
-## Contacts
-[mikeduglas@yandex.ru](mailto: mikeduglas@yandex.ru)  
-[mikeduglas66@gmail.com](mailto: mikeduglas66@gmail.com)
