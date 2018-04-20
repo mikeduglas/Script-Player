@@ -50,6 +50,12 @@ Export to Excel|Html|Xml|CSV allowed
 - school.log file created.
 - Pressing Ctrl-Shift-P captures active window and saves the image on disk.
 
+**You can use INI settings instead of command line parameter:**
+```
+[ScriptPlayer]
+Name=school_theme.xml
+```
+
 ## XML script
 In xml scripts you can use almost all events and writeable window/control properties. It allowed to POST(Event:Accepted), POST(Event:Selected), set window/control properties, or evaluate expressions.
 Full list of available events, actions, and properties see in the \docs subfolder.
